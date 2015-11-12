@@ -1,0 +1,869 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24027,        859]
+NotebookOptionsPosition[     20692,        744]
+NotebookOutlinePosition[     21073,        760]
+CellTagsIndexPosition[     21030,        757]
+WindowTitle->AtomicDB Output Window
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\<\"AtomicDB Add-On in Wolfram Language\\nAtomicDB API Primitive \
+Operations Package\\nDEMO VERSION\\n(c) April 2015, By Athanassios I. Hatzis, \
+PhD\\nAll Rights Reserved\\n\\nPackage for Microsoft Windows (64-bit), \
+x86-64, Windows\\n\"\>", 
+  " ", "\<\"Mathematica ver.10.0 for Microsoft Windows (64-bit) (June 29, \
+2014)\\n.NET Framework ver. : 4.0.30319.34209\\n\"\>"}]], "Output"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"Notice", ":", " ", 
+    RowBox[{
+    "This", " ", "version", " ", "of", " ", "AtomicDB", " ", "AddOn", " ", 
+     "is", " ", "for", " ", "demonstration", " ", "purposes", " ", "only"}]}],
+    ",", " ", 
+   RowBox[{
+   "not", " ", "for", " ", "commercial", " ", "or", " ", "other", " ", 
+    "business", " ", 
+    RowBox[{"use", " ", "!"}]}]}], Subsubsubsection]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"AtomicDB", " ", "Add"}], "-", 
+   RowBox[{"On", " ", "in", " ", "Mathematica"}]}], Title]]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+  "AtomicDB", " ", "API", " ", "Primitive", " ", "Operations", " ", "Package",
+    " ", "Test", " ", 
+   RowBox[{"(", 
+    RowBox[{"Demo", " ", "Version"}], ")"}]}], Subtitle]]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"By", " ", "Athanassios", " ", 
+     RowBox[{"I", ".", " ", "Hatzis"}]}], " ", "-", " ", 
+    RowBox[{
+     RowBox[{"(", "C", ")"}], " ", "Thu", " ", "9", " ", "Apr", " ", "2015", 
+     " ", "01"}]}], ":", "23", ":", "50"}], Subtitle]]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+  "This", " ", "output", " ", "has", " ", "been", " ", "generated", " ", 
+   RowBox[{"automagically", ".", " ", "\[HappySmiley]"}]}], Subsubtitle]]],
+
+Cell[BoxData["\<\"In this demo we build first  a simple relational data model \
+using the Wolfram List structure.Our relational model example includes two \
+main tables STOCK and ORDER that are joined with a third junction table \
+STOCK-ORDER. Then we convert this to AtomicDB data model by adding a new \
+Model, then Concepts (columns) and Records (rows).\"\>"], "Output"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Relational", " ", "Model"}], Subchapter]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox["Relations", Section]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"STOCK", " ", "Table"}], Subsection]]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"StockID\"\>", "\<\"StockNameEN\"\>", "\<\"StockPrice\"\>", \
+"\<\"StockNameGR\"\>"},
+    {"991", "\<\"Pinto Beans\"\>", 
+     "11.1`", "\<\"\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\[Alpha]\
+ \[CapitalPi]\:03af\[Nu]\[Tau]\[Omicron]\"\>"},
+    {"992", "\<\"Kidney Beans\"\>", 
+     "9.85`", "\<\"\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\[Alpha]\
+ \[CapitalKappa]\:03cc\[Kappa]\[Kappa]\[Iota]\[Nu]\[Alpha]\"\>"},
+    {"993", "\<\"White Beans\"\>", 
+     "13.45`", "\<\"\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\
+\[Alpha] \:0386\[Sigma]\[Pi]\[Rho]\[Alpha]\"\>"},
+    {"994", "\<\"Wax Beans\"\>", 
+     "18.72`", "\<\"\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\
+\[Alpha] \[CapitalKappa]\[Alpha]\[Nu]\[Alpha]\[Rho]\:03af\[Nu]\[Iota]\[Alpha]\
+\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"ORDER", " ", "Table"}], Subsection]]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"OrderID\"\>", "\<\"OrderKey\"\>"},
+    {"441", "\<\"1111-BZ\"\>"},
+    {"442", "\<\"1117-CM\"\>"},
+    {"443", "\<\"1118-SA\"\>"},
+    {"444", "\<\"1119-TT\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"STOCK", "-", 
+   RowBox[{"ORDER", " ", "Table"}]}], Subsection]]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"SOID\"\>", "\<\"SOOrderID\"\>", "\<\"SOStockID\"\>", \
+"\<\"SOQuantity\"\>"},
+    {"224", "441", "991", "1"},
+    {"225", "442", "992", "3"},
+    {"226", "443", "994", "2"},
+    {"227", "444", "993", "1"},
+    {"228", "441", "993", "3"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"AtomicDB", " ", "Model"}], Subchapter]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Login", " ", "To", " ", "Server"}], Section]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Existing", " ", "Models"}], Subsection]]],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Concept", " ", "Map", " ", "System"}], Section]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "A", " ", "New", " ", "Model"}], Subsection]]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"0", ",", "3", ",", "13", ",", "256"}], "}"}], 
+  "\[Rule]", "\<\"Beans Stock-Order Model Example\"\>"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Get", " ", "All", " ", "Models"}], Subsection]]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"NETObject", "[", 
+    RowBox[{"System", ".", "Collections", ".", "Generic", ".", 
+     RowBox[{"List`1", "[", 
+      RowBox[{"System", ".", "Collections", ".", "Generic", ".", 
+       RowBox[{"List`1", "[", 
+        RowBox[{"IAMCore_SharpClient", ".", "Core_KeyValuePair"}], "]"}]}], 
+      "]"}]}], "]"}], "\[RightGuillemet]"}],
+  NETLink`Objects`NETObject$792553905455105]], "Output"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{"\[LeftGuillemet]", 
+    RowBox[{"NETObject", "[", 
+     RowBox[{"System", ".", "Collections", ".", "Generic", ".", 
+      RowBox[{"List`1", "[", 
+       RowBox[{"IAMCore_SharpClient", ".", "Core_KeyValuePair"}], "]"}]}], 
+     "]"}], "\[RightGuillemet]"}],
+   NETLink`Objects`NETObject$1088517534908417], "}"}]], "Output"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"NETObject", "[", 
+    RowBox[{"IAMCore_SharpClient", ".", "Core_KeyValuePair"}], "]"}], 
+   "\[RightGuillemet]"}],
+  NETLink`Objects`NETObject$490399785287681]], "Output"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"Print", " ", "Key"}], "-", 
+   RowBox[{
+   "Value", " ", "Pair", " ", "of", " ", "the", " ", "first", " ", 
+    "model"}]}], Subsubsection]]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"0", ",", "3", ",", "13", ",", "256"}], "}"}], 
+  "\[Rule]", "\<\"Beans Stock-Order Model Example\"\>"}]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "Concepts", " ", "to", " ", "the", " ", "Model"}], 
+  Subsection]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "STOCK", " ", "Group", " ", "Concepts"}], Subsubsection]
+  ]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "1"}], "}"}], 
+       "\[Rule]", "\<\"StockNEXUS\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "2"}], "}"}], 
+       "\[Rule]", "\<\"StockID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "3"}], "}"}], 
+       "\[Rule]", "\<\"StockNameEN\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "4"}], "}"}], 
+       "\[Rule]", "\<\"StockPrice\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "5"}], "}"}], 
+       "\[Rule]", "\<\"StockNameGR\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "ORDER", " ", "Group", " ", "Concepts"}], Subsubsection]
+  ]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "6"}], "}"}], 
+       "\[Rule]", "\<\"OrderNEXUS\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "7"}], "}"}], 
+       "\[Rule]", "\<\"OrderID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "8"}], "}"}], 
+       "\[Rule]", "\<\"OrderKey\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"Add", " ", "STOCK"}], "-", 
+   RowBox[{"ORDER", " ", "Group", " ", "Concepts"}]}], Subsubsection]]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "9"}], "}"}], 
+       "\[Rule]", "\<\"SONEXUS\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "10"}], "}"}], 
+       "\[Rule]", "\<\"SOID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "7"}], "}"}], 
+       "\[Rule]", "\<\"OrderID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "2"}], "}"}], 
+       "\[Rule]", "\<\"StockID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1025", ",", "256", ",", "11"}], "}"}], 
+       "\[Rule]", "\<\"SOQuantity\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Data", " ", "Holder", " ", "System"}], Section]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "Collections"}], Subsection]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "STOCK", " ", "Group", " ", "Collections"}], 
+  Subsubsection]]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "257"}], "}"}], 
+       "\[Rule]", "\<\"StockNEXUS\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "258"}], "}"}], 
+       "\[Rule]", "\<\"StockID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "259"}], "}"}], 
+       "\[Rule]", "\<\"StockNameEN\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "260"}], "}"}], 
+       "\[Rule]", "\<\"StockPrice\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "261"}], "}"}], 
+       "\[Rule]", "\<\"StockNameGR\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "ORDER", " ", "Group", " ", "Collections"}], 
+  Subsubsection]]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "263"}], "}"}], 
+       "\[Rule]", "\<\"OrderNEXUS\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "264"}], "}"}], 
+       "\[Rule]", "\<\"OrderID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "265"}], "}"}], 
+       "\[Rule]", "\<\"OrderKey\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"Add", " ", "STOCK"}], "-", 
+   RowBox[{"ORDER", " ", "Group", " ", "Collections"}]}], Subsubsection]]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "266"}], "}"}], 
+       "\[Rule]", "\<\"SONEXUS\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "267"}], "}"}], 
+       "\[Rule]", "\<\"SOID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "264"}], "}"}], 
+       "\[Rule]", "\<\"OrderID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "258"}], "}"}], 
+       "\[Rule]", "\<\"StockID\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "15", ",", "268"}], "}"}], 
+       "\[Rule]", "\<\"SOQuantity\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "Records"}], Subsection]]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "STOCK", " ", "Group", " ", "Records"}], Subsubsection]]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "7", ",", "257", ",", "1"}], "}"}], 
+       "\[Rule]", "\<\"1\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "7", ",", "257", ",", "2"}], "}"}], 
+       "\[Rule]", "\<\"2\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "7", ",", "257", ",", "3"}], "}"}], 
+       "\[Rule]", "\<\"3\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "7", ",", "257", ",", "4"}], "}"}], 
+       "\[Rule]", "\<\"4\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Add", " ", "ORDER", " ", "Group", " ", "Records"}], Subsubsection]]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "1"}], "}"}], 
+       "\[Rule]", "\<\"1\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "2"}], "}"}], 
+       "\[Rule]", "\<\"2\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "3"}], "}"}], 
+       "\[Rule]", "\<\"3\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "4"}], "}"}], 
+       "\[Rule]", "\<\"4\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"Add", " ", "STOCK"}], "-", 
+   RowBox[{"ORDER", " ", "Group", " ", "Records"}]}], Subsubsection]]],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "1"}], "}"}], 
+       "\[Rule]", "\<\"1\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "2"}], "}"}], 
+       "\[Rule]", "\<\"2\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "3"}], "}"}], 
+       "\[Rule]", "\<\"3\"\>"}]},
+     {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8", ",", "263", ",", "4"}], "}"}], 
+       "\[Rule]", "\<\"4\"\>"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{783, 862},
+WindowMargins->{{473, Automatic}, {29, Automatic}},
+WindowTitle->"AtomicDB Output Window",
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[594, 21, 413, 6, 212, "Output"],
+Cell[1010, 29, 410, 11, 46, InheritFromParent],
+Cell[CellGroupData[{
+Cell[1445, 44, 138, 4, 75, InheritFromParent],
+Cell[1586, 50, 212, 6, 56, InheritFromParent],
+Cell[1801, 58, 295, 8, 56, InheritFromParent],
+Cell[2099, 68, 183, 4, 33, InheritFromParent],
+Cell[2285, 74, 373, 4, 112, "Output"],
+Cell[CellGroupData[{
+Cell[2683, 82, 77, 2, 67, InheritFromParent],
+Cell[CellGroupData[{
+Cell[2785, 88, 46, 1, 70, InheritFromParent],
+Cell[CellGroupData[{
+Cell[2856, 93, 72, 2, 49, InheritFromParent],
+Cell[2931, 97, 1297, 29, 91, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4265, 131, 72, 2, 49, InheritFromParent],
+Cell[4340, 135, 675, 19, 87, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5052, 159, 100, 3, 49, InheritFromParent],
+Cell[5155, 164, 750, 21, 102, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5966, 192, 75, 2, 67, InheritFromParent],
+Cell[CellGroupData[{
+Cell[6066, 198, 81, 2, 70, InheritFromParent],
+Cell[CellGroupData[{
+Cell[6172, 204, 76, 2, 49, InheritFromParent],
+Cell[6251, 208, 45, 1, 31, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6345, 215, 84, 2, 70, InheritFromParent],
+Cell[CellGroupData[{
+Cell[6454, 221, 92, 2, 49, InheritFromParent],
+Cell[6549, 225, 167, 4, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6753, 234, 83, 2, 49, InheritFromParent],
+Cell[6839, 238, 463, 10, 52, "Output"],
+Cell[7305, 250, 384, 9, 52, "Output"],
+Cell[7692, 261, 248, 6, 31, "Output"],
+Cell[CellGroupData[{
+Cell[7965, 271, 188, 6, 39, InheritFromParent],
+Cell[8156, 279, 167, 4, 31, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8372, 289, 113, 3, 49, InheritFromParent],
+Cell[CellGroupData[{
+Cell[8510, 296, 107, 3, 39, InheritFromParent],
+Cell[8620, 301, 1293, 41, 87, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9950, 347, 107, 3, 39, InheritFromParent],
+Cell[10060, 352, 985, 31, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11082, 388, 146, 4, 39, InheritFromParent],
+Cell[11231, 394, 1281, 41, 87, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12573, 442, 84, 2, 70, InheritFromParent],
+Cell[CellGroupData[{
+Cell[12682, 448, 76, 2, 49, InheritFromParent],
+Cell[CellGroupData[{
+Cell[12783, 454, 110, 3, 39, InheritFromParent],
+Cell[12896, 459, 1283, 41, 87, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14216, 505, 110, 3, 39, InheritFromParent],
+Cell[14329, 510, 979, 31, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15345, 546, 149, 4, 39, InheritFromParent],
+Cell[15497, 552, 1269, 41, 87, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16815, 599, 72, 2, 49, InheritFromParent],
+Cell[CellGroupData[{
+Cell[16912, 605, 103, 2, 39, InheritFromParent],
+Cell[17018, 609, 1094, 36, 72, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18149, 650, 103, 2, 39, InheritFromParent],
+Cell[18255, 654, 1094, 36, 72, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19386, 695, 145, 4, 39, InheritFromParent],
+Cell[19534, 701, 1094, 36, 72, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

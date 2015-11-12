@@ -1,0 +1,1124 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     39295,       1115]
+NotebookOptionsPosition[     33713,        930]
+NotebookOutlinePosition[     34261,        951]
+CellTagsIndexPosition[     34218,        948]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "AtomicDB API in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{{3.634832059313575*^9, 3.63483207123545*^9}, {
+  3.635768526268737*^9, 3.635768539625436*^9}, {3.6361744938157587`*^9, 
+  3.6361745008470087`*^9}, {3.636175414392127*^9, 3.636175415907752*^9}, {
+  3.637385257374623*^9, 3.637385292155873*^9}, {3.637385446280873*^9, 
+  3.637385448437123*^9}, {3.6374688742747555`*^9, 3.6374688823528805`*^9}, {
+  3.6374695805403805`*^9, 3.6374695814622555`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Professional Version", "Chapter",
+ CellChangeTimes->{{3.637519079403968*^9, 3.637519083419593*^9}}],
+
+Cell["By Athanassios I. Hatzis, PhD - (C) April 2015", "Subsection",
+ CellChangeTimes->{{3.63483208198545*^9, 3.634832110313575*^9}, {
+  3.6373853630777473`*^9, 3.6373853798589973`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Test Add and Get Commands with Pro Version", "Chapter",
+ CellChangeTimes->{{3.6373852865464973`*^9, 3.637385316780873*^9}, {
+  3.637385477312123*^9, 3.637385516624623*^9}, {3.637385558218373*^9, 
+  3.637385558749623*^9}, {3.637518717732093*^9, 3.637518720794593*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Test Preparation", "Section",
+ CellChangeTimes->{{3.6368697911642303`*^9, 3.6368697978462515`*^9}, {
+  3.636973158540738*^9, 3.636973180970426*^9}, {3.6369732172048006`*^9, 
+  3.636973226556363*^9}, {3.6373778791216927`*^9, 3.6373778810904427`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Load Application", "Subsection",
+ CellChangeTimes->{{3.636869810081296*^9, 3.6368698132955184`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "AtomicDBAddOn`"}]], "Input",
+ CellChangeTimes->{{3.636955045060707*^9, 3.636955052185707*^9}, {
+  3.6373856682652473`*^9, 3.6373856694839973`*^9}, {3.637391202894154*^9, 
+  3.6373912036597786`*^9}, {3.637391252519154*^9, 3.6373912529722786`*^9}, {
+  3.637480432218281*^9, 3.637480472848896*^9}, {3.6375156198248663`*^9, 
+  3.6375156363092413`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Shortened Commands", "Subsection",
+ CellChangeTimes->{{3.6372287245454855`*^9, 3.6372287364673605`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Primitive Commands", "Subsubsection",
+ CellChangeTimes->{{3.6372287481548605`*^9, 3.6372287516704855`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"login", "=", "ADBloginToServer"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getAny", "=", " ", "ADBgetAnything"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"setAny", "=", "ADBsetAnything"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"addAny", "=", "ADBaddAnything"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"assAny", "=", "ADBassAnything"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"impAny", "=", "ADBimpAnything"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.637173064088849*^9, 3.6371731703999825`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Enhanced Commands", "Subsubsection",
+ CellChangeTimes->{{3.6372287554673605`*^9, 3.6372287579829855`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"getMod", "=", "ADBgetModels"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getCon", " ", "=", "ADBgetConcepts"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getCol", "=", "ADBgetCollections"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getGrp", " ", "=", "ADBgetGroups"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getItm", " ", "=", " ", "ADBgetItems"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getSrcD", " ", "=", " ", "ADBgetDataSources"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getSrcT", " ", "=", " ", "ADBgetTables"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getSrcC", "=", " ", "ADBgetColumns"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6371732269631557`*^9, 3.637173237989769*^9}, {
+  3.637174524718424*^9, 3.637174525265299*^9}, {3.637174721939127*^9, 
+  3.637174742032877*^9}, {3.637174788564127*^9, 3.637174792126627*^9}, {
+  3.637175187032877*^9, 3.6371752910797524`*^9}, {3.637175329157877*^9, 
+  3.6371753419860024`*^9}, {3.637516280619788*^9, 3.637516282104163*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"addMod", " ", "=", " ", "ADBaddModel"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"addCon", " ", "=", " ", "ADBaddConcepts"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"addCol", " ", "=", " ", "ADBaddCollections"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"addRec", " ", "=", " ", "ADBaddRecords"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.637516284572913*^9, 3.637516319526038*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Output Commands", "Subsubsection",
+ CellChangeTimes->{{3.6372287627486105`*^9, 3.6372287662954855`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"prnObj", " ", "=", " ", "PrintADBobj"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"prnObjOut", "=", "PrintADBobjOut"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nout", " ", "=", " ", "PrintOut"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ntext", "=", "PrintOutText"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.637173759734049*^9, 3.637173790015299*^9}, {
+  3.637173851921549*^9, 3.637173879140299*^9}, {3.637173969734049*^9, 
+  3.637173970515299*^9}, {3.637313120170349*^9, 3.6373131217484736`*^9}, {
+  3.6373808317164197`*^9, 3.637380866825794*^9}, {3.637382814437123*^9, 
+  3.6373828645152473`*^9}, {3.637382912905873*^9, 3.6373829259527473`*^9}, {
+  3.637383108593373*^9, 3.6373831182652473`*^9}, {3.6373835624527473`*^9, 
+  3.6373835883589973`*^9}, {3.637383690655873*^9, 3.6373837209214973`*^9}, {
+  3.6373837815777473`*^9, 3.6373837834527473`*^9}, {3.637516621494788*^9, 
+  3.637516623807288*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Transformation Commands", "Subsubsection",
+ CellChangeTimes->{{3.6372288149204855`*^9, 3.6372288328267355`*^9}, {
+  3.6373124190834346`*^9, 3.6373124278178096`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"toLists", " ", "=", " ", "ADBobjToLists"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"toRules", " ", "=", " ", "ADBobjToRules"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"toAssocs", " ", "=", "ADBobjToAssocs"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.637173994921549*^9, 3.637174005234049*^9}, {
+  3.637174043296549*^9, 3.637174089655924*^9}, {3.637226472713068*^9, 
+  3.637226481197443*^9}, {3.6373070936957393`*^9, 3.6373071031801147`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"toKey", " ", "=", " ", "WLlistToADBkey"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"toKvp", " ", "=", " ", "WLruleToADBkvp"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"toRec", " ", "=", " ", "WLrecToADBrec"}], " ", ";"}]}], "Input",
+ CellChangeTimes->{{3.6373123107240596`*^9, 3.6373123977396846`*^9}, {
+  3.637396184525013*^9, 3.6373961873843884`*^9}, {3.637516632104163*^9, 
+  3.637516634416663*^9}, {3.637516865888343*^9, 3.637516868935218*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Test Predicates Commands", "Subsubsection",
+ CellChangeTimes->{{3.6372288444986105`*^9, 3.6372288510298605`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"keyQ", " ", "=", " ", "ADBkQ"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"keyLQ", "=", "ADBkLQ"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"keyLLQ", "=", "ADBkLLQ"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"kvpQ", " ", "=", " ", "ADBkvpQ"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"kvpLQ", "=", "ADBkvpLQ"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"kvpLLQ", "=", "ADBkvpLLQ"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.637226451978693*^9, 3.637226468306818*^9}, {
+   3.637226517338068*^9, 3.637226525306818*^9}, {3.637226727291193*^9, 
+   3.637226862556818*^9}, 3.6373121402240596`*^9, 3.6373122224428096`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"assocsQ", "=", "WLassocsQ"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rulesQ", " ", "=", " ", "WLrulesQ"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6373777501841927`*^9, 3.6373777769966927`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["GetBy Commands", "Subsubsection",
+ CellChangeTimes->{{3.6373122244896846`*^9, 3.6373122296615596`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"getByKey", "=", "WLgetByKey"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getByVal", "=", "WLgetByVal"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6373122319428096`*^9, 3.6373122642396846`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Titles", "Subsection",
+ CellChangeTimes->{{3.6326499910757704`*^9, 3.632649992359672*^9}, {
+   3.6326509035228696`*^9, 3.632650904510951*^9}, {3.6326509822919455`*^9, 
+   3.632650996982706*^9}, 3.6373865729839973`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<AtomicDB Add-On in Mathematica\>\"", ",", "\"\<Title\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Professional Version\>\"", ",", "\"\<Subtitle\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ntext", "[", 
+  RowBox[{
+   RowBox[{
+   "\"\<By Athanassios I. Hatzis\>\"", "<>", "\"\< - (C) \>\"", "<>", " ", 
+    RowBox[{"DateString", "[", "]"}]}], ",", "\"\<Subtitle\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ntext", "[", 
+  RowBox[{
+   RowBox[{
+   "\"\<This output has been generated automagically. \>\"", "<>", 
+    "\"\<\[HappySmiley]\>\""}], ",", "\"\<Subsubtitle\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6374688175872555`*^9, 3.6374688440403805`*^9}, {
+  3.6374689405091305`*^9, 3.6374689667278805`*^9}, {3.6374690546497555`*^9, 
+  3.6374690557278805`*^9}, {3.6374696089310055`*^9, 3.6374696345716305`*^9}, {
+  3.637515842135413*^9, 3.637515873791663*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Description of this Demo", "Subsection",
+ CellChangeTimes->{{3.6373855644527473`*^9, 3.637385605718373*^9}}],
+
+Cell[BoxData[
+ RowBox[{"nout", "[", 
+  "\"\<In this demo we build first  a simple relational data model using the \
+Wolfram List structure.Our relational model example includes two main tables \
+STOCK and ORDER that are joined with a third junction table STOCK-ORDER. Then \
+we convert this to AtomicDB data model by adding a new Model, then Concepts \
+(columns) and Records (rows).\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6374001169117317`*^9, 3.6374001169273567`*^9}, {
+  3.6374001848023567`*^9, 3.6374002248648567`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Relational Model", "Section",
+ CellChangeTimes->{{3.6328045135398836`*^9, 3.63280452016879*^9}, {
+  3.632805067053009*^9, 3.6328050691308675`*^9}, {3.6328053166084814`*^9, 
+  3.6328053293623877`*^9}, {3.6328275042070923`*^9, 3.632827508834567*^9}, {
+  3.632827569222686*^9, 3.6328275766721487`*^9}, {3.6328276683530445`*^9, 
+  3.632827720713396*^9}, {3.6348756328827677`*^9, 3.6348756395390177`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<Relational Model\>\"", ",", "\"\<Subchapter\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.632651211278658*^9, 3.6326512342588124`*^9}, {
+  3.632651282780257*^9, 3.632651286155541*^9}, {3.6348845368461533`*^9, 
+  3.6348845438617783`*^9}, {3.6348856404594345`*^9, 3.6348856441313095`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Headers of the Tables", "Subsubsection",
+ CellChangeTimes->{{3.632827825831975*^9, 3.632827833139592*^9}, {
+  3.632827874817357*^9, 3.6328278761712327`*^9}}],
+
+Cell["Headers are lists of column names, i.e. attribute names.", "Text",
+ CellChangeTimes->{{3.6373923385777473`*^9, 3.6373923841714973`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"stockHeader", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<StockID\>\"", ",", "\"\<StockNameEN\>\"", ",", "\"\<StockPrice\>\"", 
+     ",", "\"\<StockNameGR\>\""}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.632827836905217*^9, 3.6328278712469063`*^9}, 
+   3.6328279225547757`*^9, {3.6328283790196114`*^9, 3.632828380417099*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"orderHeader", "=", 
+   RowBox[{"{", 
+    RowBox[{"\"\<OrderID\>\"", ",", "\"\<OrderKey\>\""}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6328278868659296`*^9, 3.6328278897640285`*^9}, 
+   3.632827923948986*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"soHeader", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<SOID\>\"", ",", "\"\<SOOrderID\>\"", ",", "\"\<SOStockID\>\"", ",", 
+     "\"\<SOQuantity\>\""}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.632827898555024*^9, 3.632827925028902*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Body of the Tables", "Subsubsection",
+ CellChangeTimes->{{3.6328276191960335`*^9, 3.6328276540512867`*^9}, {
+   3.632827928974413*^9, 3.632827933352083*^9}, 3.6328286729607763`*^9}],
+
+Cell["\<\
+The body of the table is the relation data set and it is represented with a \
+list of records. Each record is represented with a list of values.\
+\>", "Text",
+ CellChangeTimes->{{3.6328279637837925`*^9, 3.6328279964456577`*^9}, {
+  3.632828086499202*^9, 3.6328280871104217`*^9}, {3.6373923962339973`*^9, 
+  3.637392475499623*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"stockRelData", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "991", ",", "\"\<Pinto Beans\>\"", ",", "11.1`", ",", 
+       "\"\<\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\[Alpha] \
+\[CapitalPi]\:03af\[Nu]\[Tau]\[Omicron]\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "992", ",", "\"\<Kidney Beans\>\"", ",", "9.85`", ",", 
+       "\"\<\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\[Alpha] \
+\[CapitalKappa]\:03cc\[Kappa]\[Kappa]\[Iota]\[Nu]\[Alpha]\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "993", ",", "\"\<White Beans\>\"", ",", "13.45`", ",", 
+       "\"\<\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\[Alpha] \
+\:0386\[Sigma]\[Pi]\[Rho]\[Alpha]\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "994", ",", "\"\<Wax Beans\>\"", ",", "18.72`", ",", 
+       "\"\<\[CapitalPhi]\[Alpha]\[Sigma]\:03cc\[Lambda]\[Iota]\[Alpha] \
+\[CapitalKappa]\[Alpha]\[Nu]\[Alpha]\[Rho]\:03af\[Nu]\[Iota]\[Alpha]\>\""}], 
+      "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6328279997994866`*^9, 3.6328280003176913`*^9}, {
+  3.632828075966434*^9, 3.632828123334052*^9}, {3.6328281684268103`*^9, 
+  3.632828190468891*^9}, {3.632828247382303*^9, 3.632828256885233*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"orderRelData", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"441", ",", "\"\<1111-BZ\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"442", ",", "\"\<1117-CM\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"443", ",", "\"\<1118-SA\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"444", ",", "\"\<1119-TT\>\""}], "}"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.632804716301602*^9, 3.632804721246915*^9}, {
+  3.6328050723239183`*^9, 3.6328050849597454`*^9}, {3.632825921961782*^9, 
+  3.632825922518423*^9}, {3.632828131735207*^9, 3.632828149700248*^9}, {
+  3.6328282701713686`*^9, 3.6328282831793327`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"soRelData", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"224", ",", "441", ",", "991", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"225", ",", "442", ",", "992", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"226", ",", "443", ",", "994", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"227", ",", "444", ",", "993", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"228", ",", "441", ",", "993", ",", "3"}], "}"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.632828312848846*^9, 3.6328283243213663`*^9}, 
+   3.6328287585450125`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Relation Sets", "Subsubsection",
+ CellChangeTimes->{{3.6328286652960243`*^9, 3.6328286669513493`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<Relations\>\"", ",", "\"\<Section\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6326512956099553`*^9, 3.6326513111264625`*^9}, {
+  3.6348845514242783`*^9, 3.6348845591274033`*^9}, {3.6348856483813095`*^9, 
+  3.6348856493656845`*^9}, {3.637392557499623*^9, 3.6373925578902473`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<STOCK Table\>\"", ",", "\"\<Subsection\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.637392545249623*^9, 3.637392571593373*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"stockRelSet", "=", 
+     RowBox[{"Insert", "[", 
+      RowBox[{"stockRelData", ",", "stockHeader", ",", "1"}], "]"}]}], ")"}], 
+   "//", "TableForm"}], "//", "nout"}]], "Input",
+ CellChangeTimes->{{3.632828337444708*^9, 3.6328283730333977`*^9}, {
+  3.6328284740497904`*^9, 3.6328284812501445`*^9}, {3.632828535197371*^9, 
+  3.6328285465882006`*^9}, {3.632828620900053*^9, 3.632828633188656*^9}, {
+  3.632828676221489*^9, 3.63282867876676*^9}, {3.6348846725024033`*^9, 
+  3.6348846740336533`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<ORDER Table\>\"", ",", "\"\<Subsection\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.637392579593373*^9, 3.637392580187123*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"orderRelSet", "=", 
+     RowBox[{"Insert", "[", 
+      RowBox[{"orderRelData", ",", "orderHeader", ",", "1"}], "]"}]}], ")"}], 
+   "//", "TableForm"}], "//", "nout"}]], "Input",
+ CellChangeTimes->{{3.632828684400569*^9, 3.632828702877858*^9}, {
+  3.6348847177836533`*^9, 3.6348847192211533`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<STOCK-ORDER Table\>\"", ",", "\"\<Subsection\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.637392585843373*^9, 3.637392586780873*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"soRelSet", "=", 
+     RowBox[{"Insert", "[", 
+      RowBox[{"soRelData", ",", "soHeader", ",", "1"}], "]"}]}], ")"}], "//", 
+   "TableForm"}], "//", "nout"}]], "Input",
+ CellChangeTimes->{{3.632828714849907*^9, 3.6328287370937567`*^9}, {
+  3.6348847218617783`*^9, 3.6348847229086533`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["AtomicDB Model", "Section",
+ CellChangeTimes->{{3.634832205157325*^9, 3.63483220842295*^9}, {
+  3.6348757031640177`*^9, 3.6348757139765177`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<AtomicDB Model\>\"", ",", "\"\<Subchapter\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.632651211278658*^9, 3.6326512342588124`*^9}, {
+  3.632651282780257*^9, 3.632651286155541*^9}, {3.6348845368461533`*^9, 
+  3.6348845438617783`*^9}, {3.6348849342211533`*^9, 3.6348849719086533`*^9}, {
+  3.6348856026625595`*^9, 3.6348856351156845`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Login To Server", "Subsection",
+ CellChangeTimes->{{3.637395200806263*^9, 3.6373952087906384`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Login To Server\>\"", ",", "\"\<Section\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.637395597118763*^9, 3.6373955999781384`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<Existing Models\>\"", ",", "\"\<Subsection\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6373956707593884`*^9, 3.6373956895718884`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"modelKeys", "=", 
+    RowBox[{"login", "[", 
+     RowBox[{
+     "\"\<localhost\>\"", ",", "\"\<System Administrator\>\"", ",", 
+      "\"\<Wind0ws7\>\"", ",", "\"\<ManageIT\>\""}], "]"}]}], ")"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.628950291068244*^9, 3.628950307896369*^9}, {
+   3.628950382974494*^9, 3.628950460802619*^9}, {3.629011231150113*^9, 
+   3.629011231438881*^9}, {3.6290138761994944`*^9, 3.6290138861152987`*^9}, {
+   3.6290197304537535`*^9, 3.629019782320444*^9}, {3.6297206477865562`*^9, 
+   3.6297206682255244`*^9}, {3.629720762250614*^9, 3.629720769886506*^9}, {
+   3.6297762621546383`*^9, 3.629776293403123*^9}, {3.629776340420537*^9, 
+   3.629776349199027*^9}, {3.6297764411182213`*^9, 3.6297764719356365`*^9}, {
+   3.6297765864356365`*^9, 3.6297766075606365`*^9}, {3.629776646045012*^9, 
+   3.6297766527793865`*^9}, {3.629879671349765*^9, 3.6298796754917946`*^9}, 
+   3.632200640560771*^9, 3.632582411023373*^9, {3.6361938368868237`*^9, 
+   3.636193837873723*^9}, {3.6361938737391233`*^9, 3.6361938741453733`*^9}, {
+   3.636193904742053*^9, 3.6361939050389285`*^9}, {3.636958226732582*^9, 
+   3.636958236685707*^9}, {3.6369702819959908`*^9, 3.6369702843163033`*^9}, {
+   3.636971895832066*^9, 3.6369719041992536`*^9}, {3.6371731855466323`*^9, 
+   3.637173185926856*^9}, {3.637313300857849*^9, 3.637313302607849*^9}, {
+   3.6373817925464973`*^9, 3.6373818088277473`*^9}, {3.6373835995777473`*^9, 
+   3.6373835998589973`*^9}, {3.637383857093373*^9, 3.6373838577964973`*^9}, {
+   3.637395398650013*^9, 3.637395431806263*^9}, {3.637516997872718*^9, 
+   3.637517036138343*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add A Model", "Subsection",
+ CellChangeTimes->{{3.6348763871640177`*^9, 3.6348763929765177`*^9}, {
+  3.6348778592421427`*^9, 3.6348778800858927`*^9}, {3.6348789443486433`*^9, 
+  3.6348789446750712`*^9}, {3.634881081527532*^9, 3.634881087621282*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Concept Map System\>\"", ",", "\"\<Section\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6348855868344345`*^9, 3.6348856148813095`*^9}, 
+   3.6348857259906845`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "modelName", "=", 
+   "\"\<Beans Stock-Order Model Added with ADBAddOn Pro Version\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.634891696156021*^9, 3.634891705296646*^9}, {
+  3.6361754868701677`*^9, 3.636175489267816*^9}, {3.6361755221438217`*^9, 
+  3.6361755609875717`*^9}, {3.637396846806263*^9, 3.637396848400013*^9}, {
+  3.637517075810218*^9, 3.637517086060218*^9}, {3.637518972263343*^9, 
+  3.637518998982093*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<Add A New Model\>\"", ",", "\"\<Subsection\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.637397756025013*^9, 3.637397758712513*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"res1", "=", 
+    RowBox[{"addMod", "[", "modelName", "]"}]}], ")"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.6348739089718304`*^9, 3.6348739489874554`*^9}, {
+   3.634891712249771*^9, 3.634891714031021*^9}, {3.634893136086685*^9, 
+   3.634893179930435*^9}, {3.634894469023156*^9, 3.6348944807575316`*^9}, {
+   3.6348947246950316`*^9, 3.6348947342887816`*^9}, {3.634985191430193*^9, 
+   3.634985195586443*^9}, 3.6373927239527473`*^9, {3.637392772155873*^9, 
+   3.6373927737652473`*^9}, {3.637393590374623*^9, 3.6373935909214973`*^9}, {
+   3.6373969411968884`*^9, 3.6373969430718884`*^9}, {3.637397210618763*^9, 
+   3.6373972356343884`*^9}, {3.6374682761341305`*^9, 
+   3.6374682771966305`*^9}, {3.637517142200843*^9, 3.637517200935218*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Get Command", "Subsection",
+ CellChangeTimes->{{3.6373934745464973`*^9, 3.6373934834839973`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<Get All Models\>\"", ",", "\"\<Subsection\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6373967032593884`*^9, 3.637396704837513*^9}, {
+  3.6373974196343884`*^9, 3.637397438243763*^9}, {3.6374667203805833`*^9, 
+  3.637466725339469*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"getMod", "[", "]"}], "//", "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637517346232093*^9, 3.637517366669593*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add Concepts to the Model", "Subsection",
+ CellChangeTimes->{{3.6348764421327677`*^9, 3.6348764448983927`*^9}, {
+  3.6348789477994556`*^9, 3.6348789481258836`*^9}, {3.6348810766994066`*^9, 
+  3.634881079027532*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<Add Concepts to the Model\>\"", ",", "\"\<Subsection\>\""}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6348855624750595`*^9, 3.6348855634750595`*^9}, {
+  3.634890253702896*^9, 3.634890254296646*^9}, {3.634890291140396*^9, 
+  3.634890294015396*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"stockConceptsNames", "=", 
+   RowBox[{"Insert", "[", 
+    RowBox[{"stockHeader", ",", "\"\<StockNEXUS\>\"", ",", "1"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6348770492265177`*^9, 3.6348770706796427`*^9}, {
+   3.6348772482890177`*^9, 3.6348772626483927`*^9}, {3.634880841621282*^9, 
+   3.634880842465032*^9}, {3.634892762237076*^9, 3.634892766565201*^9}, {
+   3.6348943313512816`*^9, 3.634894346116906*^9}, {3.6348945001637816`*^9, 
+   3.6348945004762816`*^9}, 3.634894700304406*^9, {3.6373976590406384`*^9, 
+   3.6373976629156384`*^9}, {3.637517956575843*^9, 3.637517963122718*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"orderConceptsNames", "=", 
+   RowBox[{"Insert", "[", 
+    RowBox[{"orderHeader", ",", "\"\<OrderNEXUS\>\"", ",", "1"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.637517968403968*^9, 3.637517970747718*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"soConceptsNames", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<SONEXUS\>\"", ",", "\"\<SOID\>\"", ",", "\"\<OrderID\>\"", ",", 
+     "\"\<StockID\>\"", ",", "\"\<SOQuantity\>\""}], "}"}]}], ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Add STOCK Group Concepts", "Subsubsection",
+ CellChangeTimes->{{3.6349859698774586`*^9, 3.6349859787368336`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Add STOCK Group Concepts\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6348858673969345`*^9, 3.6348858949438095`*^9}, {
+  3.6348859266781845`*^9, 3.6348859309906845`*^9}, {3.6348860531313095`*^9, 
+  3.6348860617719345`*^9}, {3.634890195609146*^9, 3.634890239296646*^9}, {
+  3.634890419187271*^9, 3.634890419765396*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addCon", "[", 
+   RowBox[{"modelName", ",", "stockConceptsNames"}], "]"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637517442247718*^9, 3.637517468935218*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add ORDER Group Concepts", "Subsubsection",
+ CellChangeTimes->{{3.6349859837524586`*^9, 3.6349859886274586`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Add ORDER Group Concepts\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6348859055531845`*^9, 3.6348859351469345`*^9}, {
+  3.6348860996781845`*^9, 3.6348861020219345`*^9}, {3.634890208468521*^9, 
+  3.634890210171646*^9}, {3.634890241796646*^9, 3.634890243921646*^9}, {
+  3.634890422890396*^9, 3.634890423562271*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addCon", "[", 
+   RowBox[{"modelName", ",", "orderConceptsNames"}], "]"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637517509638343*^9, 3.637517527794593*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add STOCK-ORDER Group Concepts", "Subsubsection",
+ CellChangeTimes->{{3.6349859940649586`*^9, 3.6349860036899586`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{
+  "\"\<Add STOCK-ORDER Group Concepts\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6348859127875595`*^9, 3.6348859375688095`*^9}, {
+  3.6348861089906845`*^9, 3.6348861106156845`*^9}, {3.634890220109146*^9, 
+  3.634890248406021*^9}, {3.634890426046646*^9, 3.634890426640396*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addCon", "[", 
+   RowBox[{"modelName", ",", "soConceptsNames"}], "]"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637517562825843*^9, 3.637517577653968*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add Collections Auto-generated from Concepts", "Subsection",
+ CellChangeTimes->{{3.6348813060671325`*^9, 3.6348813068796325`*^9}, {
+  3.6348813736921325`*^9, 3.6348813823171325`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Data Holder System\>\"", ",", "\"\<Section\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6326523792566786`*^9, 3.6326524000998793`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ntext", "[", 
+   RowBox[{"\"\<Add Collections\>\"", ",", "\"\<Subsection\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.634890335671646*^9, 3.634890342062271*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["STOCK Group Collections", "Subsubsection",
+ CellChangeTimes->{{3.6348826015014267`*^9, 3.6348826153920517`*^9}, {
+  3.6348826653764267`*^9, 3.6348826793295517`*^9}, {3.6349860446274586`*^9, 
+  3.6349860528305836`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{
+  "\"\<Add STOCK Group Collections\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.634890161249771*^9, 3.634890185796646*^9}, {
+  3.634890230124771*^9, 3.634890233312271*^9}, {3.634890276484146*^9, 
+  3.634890309062271*^9}, {3.634890487421646*^9, 3.634890488390396*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addCol", "[", 
+   RowBox[{"modelName", ",", "stockConceptsNames"}], "]"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637517627841468*^9, 3.637517629747718*^9}, {
+  3.637517756372718*^9, 3.637517772169593*^9}, {3.637517841607093*^9, 
+  3.637517856028968*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ORDER Group Collections", "Subsubsection",
+ CellChangeTimes->{{3.6349860717055836`*^9, 3.6349860752212086`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{
+  "\"\<Add ORDER Group Collections\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.634890456984146*^9, 3.634890458765396*^9}, {
+  3.634890493062271*^9, 3.634890493281021*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addCol", "[", 
+   RowBox[{"modelName", ",", "orderConceptsNames"}], "]"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637517896888343*^9, 3.637517932825843*^9}, {
+  3.637517991528968*^9, 3.637518031310218*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["STOCK-ORDER Group Collections", "Subsubsection",
+ CellChangeTimes->{{3.6349860802993336`*^9, 3.6349860877368336`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{
+  "\"\<Add STOCK-ORDER Group Collections\>\"", ",", "\"\<Subsubsection\>\""}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.634890465827896*^9, 3.634890466734146*^9}, {
+  3.634890497827896*^9, 3.634890498093521*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addCol", "[", 
+   RowBox[{"modelName", ",", "soConceptsNames"}], "]"}], "//", 
+  "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637518046450843*^9, 3.637518061435218*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add Records", "Subsection",
+ CellChangeTimes->{{3.6349669558085117`*^9, 3.6349669587928867`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Add Records\>\"", ",", "\"\<Subsection\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.6349823513431873`*^9, 3.63498236131365*^9}, {
+  3.6349861788149586`*^9, 3.6349861940805836`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Add Records to the STOCK Group", "Subsubsection",
+ CellChangeTimes->{{3.6349861556118336`*^9, 3.6349861627680836`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Add STOCK Group Records\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6349861858149586`*^9, 3.6349861861118336`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addRec", "[", 
+   RowBox[{"modelName", ",", "stockConceptsNames", ",", "stockRelSet"}], 
+   "]"}], "//", "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637518187841468*^9, 3.637518227278968*^9}, {
+  3.637519448060218*^9, 3.637519450325843*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add Records to the ORDER Group", "Subsubsection",
+ CellChangeTimes->{{3.6349861556118336`*^9, 3.6349861627680836`*^9}, {
+  3.6349862363930836`*^9, 3.6349862370493336`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{"\"\<Add ORDER Group Records\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6349861858149586`*^9, 3.6349861861118336`*^9}, {
+  3.6349862427212086`*^9, 3.6349862432837086`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addRec", "[", 
+   RowBox[{"modelName", ",", "orderConceptsNames", ",", "orderRelSet"}], 
+   "]"}], "//", "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637518445528968*^9, 3.637518464310218*^9}, {
+  3.637519456919593*^9, 3.637519458091468*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Add Records to the STOCK-ORDER Group", "Subsubsection",
+ CellChangeTimes->{{3.6349861556118336`*^9, 3.6349861627680836`*^9}, {
+  3.6349862363930836`*^9, 3.6349862370493336`*^9}, {3.6349864249555836`*^9, 
+  3.6349864256899586`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ntext", "[", 
+  RowBox[{
+  "\"\<Add STOCK-ORDER Group Records\>\"", ",", "\"\<Subsubsection\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6349861858149586`*^9, 3.6349861861118336`*^9}, {
+  3.6349862427212086`*^9, 3.6349862432837086`*^9}, {3.6349864305180836`*^9, 
+  3.6349864312680836`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addRec", "[", 
+   RowBox[{"modelName", ",", "soConceptsNames", ",", "soRelSet"}], "]"}], "//",
+   "prnObjOut"}]], "Input",
+ CellChangeTimes->{{3.637518477403968*^9, 3.637518499966468*^9}, {
+  3.637519467669593*^9, 3.637519468966468*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1204, 902},
+WindowMargins->{{13, Automatic}, {27, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.2, 841.8},
+"PrintingMargins"->{{9.576, 9.576}, {14.112, 14.112}}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 511, 10, 101, "Title"],
+Cell[CellGroupData[{
+Cell[1116, 36, 105, 1, 72, "Chapter"],
+Cell[1224, 39, 186, 2, 49, "Subsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1447, 46, 273, 3, 72, "Chapter"],
+Cell[CellGroupData[{
+Cell[1745, 53, 255, 3, 70, "Section"],
+Cell[CellGroupData[{
+Cell[2025, 60, 106, 1, 49, "Subsection"],
+Cell[2134, 63, 76, 1, 31, "Input"],
+Cell[2213, 66, 378, 6, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2628, 77, 110, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[2763, 82, 113, 1, 39, "Subsubsection"],
+Cell[2879, 85, 594, 14, 132, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3510, 104, 112, 1, 39, "Subsubsection"],
+Cell[3625, 107, 1105, 25, 172, "Input"],
+Cell[4733, 134, 459, 12, 92, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5229, 151, 110, 1, 39, "Subsubsection"],
+Cell[5342, 154, 973, 18, 92, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6352, 177, 171, 2, 39, "Subsubsection"],
+Cell[6526, 181, 506, 11, 72, "Input"],
+Cell[7035, 194, 512, 11, 72, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7584, 210, 119, 1, 39, "Subsubsection"],
+Cell[7706, 213, 743, 17, 152, "Input"],
+Cell[8452, 232, 243, 5, 52, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8732, 242, 109, 1, 39, "Subsubsection"],
+Cell[8844, 245, 239, 5, 52, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9132, 256, 224, 3, 49, "Subsection"],
+Cell[9359, 261, 969, 21, 92, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10365, 287, 114, 1, 49, "Subsection"],
+Cell[10482, 290, 528, 8, 92, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11059, 304, 406, 5, 70, "Section"],
+Cell[11468, 311, 363, 7, 31, "Input"],
+Cell[CellGroupData[{
+Cell[11856, 322, 163, 2, 39, "Subsubsection"],
+Cell[12022, 326, 142, 1, 30, "Text"],
+Cell[12167, 329, 368, 8, 31, "Input"],
+Cell[12538, 339, 254, 7, 31, "Input"],
+Cell[12795, 348, 280, 7, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13112, 360, 187, 2, 39, "Subsubsection"],
+Cell[13302, 364, 340, 6, 30, "Text"],
+Cell[13645, 372, 1292, 28, 52, "Input"],
+Cell[14940, 402, 693, 17, 31, "Input"],
+Cell[15636, 421, 658, 17, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16331, 443, 108, 1, 39, "Subsubsection"],
+Cell[16442, 446, 357, 7, 31, "Input"],
+Cell[16802, 455, 204, 5, 31, "Input"],
+Cell[17009, 462, 561, 12, 31, "Input"],
+Cell[17573, 476, 204, 5, 31, "Input"],
+Cell[17780, 483, 361, 9, 31, "Input"],
+Cell[18144, 494, 210, 5, 31, "Input"],
+Cell[18357, 501, 354, 9, 31, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18760, 516, 151, 2, 70, "Section"],
+Cell[18914, 520, 414, 8, 31, "Input"],
+Cell[CellGroupData[{
+Cell[19353, 532, 105, 1, 49, "Subsection"],
+Cell[19461, 535, 185, 3, 31, "Input"],
+Cell[19649, 540, 212, 5, 31, "Input"],
+Cell[19864, 547, 1664, 27, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21565, 579, 255, 3, 49, "Subsection"],
+Cell[21823, 584, 221, 5, 31, "Input"],
+Cell[22047, 591, 461, 10, 31, "Input"],
+Cell[22511, 603, 208, 5, 31, "Input"],
+Cell[22722, 610, 806, 14, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23565, 629, 103, 1, 49, "Subsection"],
+Cell[23671, 632, 311, 7, 31, "Input"],
+Cell[23985, 641, 152, 3, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24174, 649, 221, 3, 49, "Subsection"],
+Cell[24398, 654, 321, 7, 31, "Input"],
+Cell[24722, 663, 631, 11, 31, "Input"],
+Cell[25356, 676, 249, 6, 31, "Input"],
+Cell[25608, 684, 241, 6, 31, "Input"],
+Cell[CellGroupData[{
+Cell[25874, 694, 119, 1, 39, "Subsubsection"],
+Cell[25996, 697, 406, 7, 31, "Input"],
+Cell[26405, 706, 209, 5, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26651, 716, 119, 1, 39, "Subsubsection"],
+Cell[26773, 719, 402, 7, 31, "Input"],
+Cell[27178, 728, 209, 5, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27424, 738, 125, 1, 39, "Subsubsection"],
+Cell[27552, 741, 362, 7, 31, "Input"],
+Cell[27917, 750, 206, 5, 31, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28172, 761, 189, 2, 49, "Subsection"],
+Cell[28364, 765, 193, 4, 31, "Input"],
+Cell[28560, 771, 208, 5, 31, "Input"],
+Cell[CellGroupData[{
+Cell[28793, 780, 224, 3, 39, "Subsubsection"],
+Cell[29020, 785, 351, 7, 31, "Input"],
+Cell[29374, 794, 307, 7, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29718, 806, 118, 1, 39, "Subsubsection"],
+Cell[29839, 809, 256, 6, 31, "Input"],
+Cell[30098, 817, 258, 6, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30393, 828, 124, 1, 39, "Subsubsection"],
+Cell[30520, 831, 262, 6, 31, "Input"],
+Cell[30785, 839, 206, 5, 31, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31040, 850, 103, 1, 49, "Subsection"],
+Cell[31146, 853, 236, 4, 31, "Input"],
+Cell[CellGroupData[{
+Cell[31407, 861, 125, 1, 39, "Subsubsection"],
+Cell[31535, 864, 204, 4, 31, "Input"],
+Cell[31742, 870, 279, 6, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32058, 881, 178, 2, 39, "Subsubsection"],
+Cell[32239, 885, 257, 5, 31, "Input"],
+Cell[32499, 892, 279, 6, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32815, 903, 237, 3, 39, "Subsubsection"],
+Cell[33055, 908, 319, 7, 31, "Input"],
+Cell[33377, 917, 272, 6, 64, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

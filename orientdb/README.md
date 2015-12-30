@@ -1,2 +1,0 @@
-# OrientDB
-OrientDB Mathematica API

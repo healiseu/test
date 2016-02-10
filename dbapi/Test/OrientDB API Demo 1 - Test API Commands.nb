@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    142836,       3720]
-NotebookOptionsPosition[    131667,       3337]
-NotebookOutlinePosition[    136048,       3484]
-CellTagsIndexPosition[    135409,       3456]
+NotebookDataLength[    147060,       3809]
+NotebookOptionsPosition[    135540,       3422]
+NotebookOutlinePosition[    140027,       3572]
+CellTagsIndexPosition[    139367,       3543]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -42,12 +42,12 @@ Cell[BoxData[
   3.637515842135413*^9, 3.637515873791663*^9}, {3.648964474582922*^9, 
   3.6489644773963985`*^9}}],
 
-Cell[BoxData["\<\"By Athanassios I. Hatzis, PhD - (C) Wed 30 Dec 2015 \
-12:16:17\"\>"], "Output",
+Cell[BoxData["\<\"By Athanassios I. Hatzis, PhD - (C) Tue 9 Feb 2016 14:28:27\
+\"\>"], "Output",
  CellChangeTimes->{3.6489559375329585`*^9, 3.6489561578425283`*^9, 
   3.6489644788807735`*^9, 3.6490556000211153`*^9, 3.6491773609576187`*^9, 
   3.649568146728483*^9, 3.6495717085966473`*^9, 3.660459335882577*^9, 
-  3.6604593772199173`*^9},
+  3.6604593772199173`*^9, 3.6640097079045725`*^9},
  FontFamily->"Lucida Sans Unicode",
  FontSize->16,
  FontWeight->"Bold"]
@@ -96,10 +96,33 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell["Contents", "Subsection",
- CellChangeTimes->{{3.6604604402245007`*^9, 3.660460455162713*^9}}],
+ CellChangeTimes->{{3.6604604402245007`*^9, 3.660460455162713*^9}},
+ CellTags->"c:3"],
 
 Cell[TextData[{
- "Load Packages",
+ "OrientDB API Demo 1",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["1",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
+    "c:1"}]], "TOCPage"]
+}], "TOCTitle"],
+
+Cell[TextData[{
+ "Create TOC",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["1",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
+    "c:2"}]], "TOCPage"]
+}], "TOCSubsubsection"],
+
+Cell[TextData[{
+ "Contents",
  " ",
  StyleBox["\t", "Leader"],
  Cell[TextData[ButtonBox["1",
@@ -107,20 +130,29 @@ Cell[TextData[{
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
     "c:3"}]], "TOCPage"]
-}], "Input"],
+}], "TOCSubsection"],
 
 Cell[TextData[{
- "Get Server",
+ "Load Packages",
  " ",
  StyleBox["\t", "Leader"],
  Cell[TextData[ButtonBox["2",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:8"}]], "TOCPage"]
-}], "Input"],
+    "c:4"}]], "TOCPage"]
+}], "TOCSection"],
 
-Cell["", "Text"],
+Cell[TextData[{
+ "Get Server",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["3",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
+    "c:5"}]], "TOCPage"]
+}], "TOCSection"],
 
 Cell[TextData[{
  "Database Operations",
@@ -130,8 +162,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:9"}]], "TOCPage"]
-}], "Input"],
+    "c:6"}]], "TOCPage"]
+}], "TOCSection"],
 
 Cell[TextData[{
  "Create Database",
@@ -141,19 +173,19 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:10"}]], "TOCPage"]
-}], "Input"],
+    "c:7"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Get Databases",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["5",
+ Cell[TextData[ButtonBox["6",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:11"}]], "TOCPage"]
-}], "Input"],
+    "c:8"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Get Single Database",
@@ -163,8 +195,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:12"}]], "TOCPage"]
-}], "Input"],
+    "c:9"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Classes Operations",
@@ -174,8 +206,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:15"}]], "TOCPage"]
-}], "Input"],
+    "c:10"}]], "TOCPage"]
+}], "TOCSection"],
 
 Cell[TextData[{
  "Add/Delete/Add/Get Class",
@@ -185,10 +217,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:16"}]], "TOCPage"]
-}], "Input"],
-
-Cell["", "Text"],
+    "c:11"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "OrientDB OSQL Operations",
@@ -198,8 +228,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:19"}]], "TOCPage"]
-}], "Input"],
+    "c:12"}]], "TOCPage"]
+}], "TOCSection"],
 
 Cell[TextData[{
  "OrientDB - POST OSQL Command",
@@ -209,8 +239,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:20"}]], "TOCPage"]
-}], "Input"],
+    "c:13"}]], "TOCPage"]
+}], "TOCSubsection"],
 
 Cell[TextData[{
  "Make a list of OrientDB SQL Commands (OSQL)",
@@ -220,8 +250,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:21"}]], "TOCPage"]
-}], "Input"],
+    "c:14"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Execute OSQL commands one by one",
@@ -231,8 +261,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:22"}]], "TOCPage"]
-}], "Input"],
+    "c:15"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Set permanently the database and command parameters",
@@ -242,8 +272,8 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:23"}]], "TOCPage"]
-}], "Input"],
+    "c:16"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Get Person records",
@@ -253,116 +283,119 @@ Cell[TextData[{
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:24"}]], "TOCPage"]
-}], "Input"],
+    "c:17"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "OrientDB - POST OSQL Script",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["10",
+ Cell[TextData[ButtonBox["9",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:25"}]], "TOCPage"]
-}], "Input"],
+    "c:18"}]], "TOCPage"]
+}], "TOCSubsection"],
 
 Cell[TextData[{
  "Delete Database",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["10",
+ Cell[TextData[ButtonBox["9",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:26"}]], "TOCPage"]
-}], "Input"],
+    "c:19"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Create Database",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["11",
+ Cell[TextData[ButtonBox["9",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:27"}]], "TOCPage"]
-}], "Input"],
+    "c:20"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Create Classes and Properties with an OrientDB SQL script",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["11",
+ Cell[TextData[ButtonBox["9",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:28"}]], "TOCPage"]
-}], "Input"],
+    "c:21"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Populate with a few MEMBERs and an ARTICLE",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["12",
+ Cell[TextData[ButtonBox["10",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:29"}]], "TOCPage"]
-}], "Input"],
+    "c:22"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "Create Edge - MEMBER isAuthorOf ARTICLE",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["12",
+ Cell[TextData[ButtonBox["11",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:30"}]], "TOCPage"]
-}], "Input"],
+    "c:23"}]], "TOCPage"]
+}], "TOCSubsubsection"],
 
 Cell[TextData[{
  "OrientDB - GET OSQL Script",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["13",
+ Cell[TextData[ButtonBox["11",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:31"}]], "TOCPage"]
-}], "Input"],
+    "c:24"}]], "TOCPage"]
+}], "TOCSubsection"],
 
 Cell[TextData[{
  "Read-Only OrientDB SQL Command",
  " ",
  StyleBox["\t", "Leader"],
- Cell[TextData[ButtonBox["13",
+ Cell[TextData[ButtonBox["11",
   BaseStyle->"PageLink",
   ButtonData->{
     FrontEnd`FileName[{}, "OrientDB API Demo 1 - Test API Commands.nb"], 
-    "c:32"}]], "TOCPage"]
-}], "Input"]
+    "c:25"}]], "TOCPage"]
+}], "TOCSubsubsection"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["Load Packages", "Section",
  CellChangeTimes->{{3.649568054307585*^9, 3.649568058059538*^9}},
- CellTags->"c:3"],
+ CellTags->"c:4"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"<<", "\"\<DBAPI`\>\""}]], "Input",
+ RowBox[{"<<", "\"\<DBAPI`OrientDB`\>\""}]], "Input",
  CellChangeTimes->{{3.6433650440971107`*^9, 3.643365056587859*^9}, {
-  3.6434032195014515`*^9, 3.6434032261596546`*^9}}],
+  3.6434032195014515`*^9, 3.6434032261596546`*^9}, {3.6640051171418767`*^9, 
+  3.664005144468706*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["\<\"DBAPI Application Project\"\>"], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.6604571860045643`*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.6640226677911267`*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -385,28 +418,37 @@ Cell[BoxData[
    Hyperlink["HEALIS", "http://healis.eu"], 
    "- Healthy Information Systems/Services"],
   Editable->False]], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.660457186124545*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.6640226678178234`*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"Running on Mathematica \"\>", "\[InvisibleSpace]", 
    RowBox[{"\<\"Version\"\>", 
-    "\[Rule]", "\<\"10.2.0 for Linux x86 (64-bit) (July 6, 2015)\"\>"}]}],
+    "\[Rule]", "\<\"10.3.1 for Microsoft Windows (64-bit) (December 9, \
+2015)\"\>"}]}],
   SequenceForm[
   "Running on Mathematica ", "Version" -> 
-   "10.2.0 for Linux x86 (64-bit) (July 6, 2015)"],
+   "10.3.1 for Microsoft Windows (64-bit) (December 9, 2015)"],
   Editable->False]], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.6604571861286697`*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.6640226678178234`*^9}}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.660457186137055*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.6640226678178234`*^9}}],
 
 Cell[BoxData["\<\"Data Utilities Package v0.9\"\>"], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.66045718613935*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.664022667830988*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -428,21 +470,27 @@ Cell[BoxData[
    Hyperlink[
    "Athanassios I. Hatzis", "https://www.linkedin.com/in/athanassios"]],
   Editable->False]], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.660457186141026*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.664022667830988*^9}}],
 
 Cell[BoxData["\<\"Distributed under GNU LGPL - GNU Lesser General Public \
 License\\n\"\>"], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.660457186142001*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.6640226678430777`*^9}}],
 
-Cell[BoxData["\<\"OrientDB API Package v0.9\"\>"], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.660457186143257*^9}],
+Cell[BoxData["\<\"OrientDB API Package v1.0.3\"\>"], "Print",
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.6640226678571715`*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"Copyright December 2015, By \"\>", "\[InvisibleSpace]", 
+  RowBox[{"\<\"Copyright February 2016, By \"\>", "\[InvisibleSpace]", 
    TagBox[
     ButtonBox[
      PaneSelectorBox[{False->"\<\"Athanassios I. Hatzis\"\>", True->
@@ -456,17 +504,21 @@ Cell[BoxData[
        URL["https://www.linkedin.com/in/athanassios"], None},
      ButtonNote->"https://www.linkedin.com/in/athanassios"],
     Annotation[#, "https://www.linkedin.com/in/athanassios", "Hyperlink"]& ]}],
-  SequenceForm["Copyright December 2015, By ", 
+  SequenceForm["Copyright February 2016, By ", 
    Hyperlink[
    "Athanassios I. Hatzis", "https://www.linkedin.com/in/athanassios"]],
   Editable->False]], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.660457186149683*^9}],
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.6640226678571715`*^9}}],
 
 Cell[BoxData["\<\"Distributed under GNU LGPL - GNU Lesser General Public \
-License\"\>"], "Print",
- CellChangeTimes->{3.6489645699262457`*^9, 3.6490556157349825`*^9, 
-  3.649176907462313*^9, 3.660457186153825*^9}]
+License\\n\"\>"], "Print",
+ CellChangeTimes->{
+  3.6489645699262457`*^9, 3.6490556157349825`*^9, 3.649176907462313*^9, 
+   3.6604571860045643`*^9, 3.664005146734206*^9, 3.6640216832542286`*^9, {
+   3.6640226380332184`*^9, 3.664022667870837*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -477,7 +529,7 @@ Cell["Get Server", "Section",
  CellChangeTimes->{{3.6435701256255074`*^9, 3.6435701267230487`*^9}, {
   3.6488921618513737`*^9, 3.6488921624064612`*^9}, {3.648892314801846*^9, 
   3.6488923359783244`*^9}},
- CellTags->"c:8"],
+ CellTags->"c:5"],
 
 Cell[CellGroupData[{
 
@@ -511,22 +563,20 @@ Cell[BoxData[
                 GrayLevel[0.3]], 
                StyleBox["\[Rule]", 
                 GrayLevel[0.5]], 
-               StyleBox["\"5\"", FontColor -> GrayLevel[0.4]]}], ",", 
+               StyleBox["\"210\"", FontColor -> GrayLevel[0.4]]}], ",", 
              RowBox[{
                StyleBox["\"remoteAddress\"", 
                 GrayLevel[0.3]], 
                StyleBox["\[Rule]", 
                 GrayLevel[0.5]], 
                StyleBox[
-               "\"/127.0.0.1:60826\"", FontColor -> GrayLevel[0.4]]}], ",", 
+               "\"/127.0.0.1:51921\"", FontColor -> GrayLevel[0.4]]}], ",", 
              RowBox[{
                StyleBox["\"db\"", 
                 GrayLevel[0.3]], 
                StyleBox["\[Rule]", 
                 GrayLevel[0.5]], 
-               StyleBox[
-               "\"GratefulDeadConcerts\"", FontColor -> GrayLevel[0.4]]}], 
-             ",", 
+               StyleBox["\"-\"", FontColor -> GrayLevel[0.4]]}], ",", 
              StyleBox[
               SubscriptBox["\[CenterEllipsis]", "13"], 
               GrayLevel[0.5]], "\[ThinSpace]", 
@@ -571,8 +621,36 @@ Cell[BoxData[
                StyleBox["\[Rule]", 
                 GrayLevel[0.5]], 
                StyleBox[
-               "\"/home/apps/orientdb218/databases/GratefulDeadConcerts\"", 
-                FontColor -> GrayLevel[0.4]]}], "\[ThinSpace]", 
+               "\"C:/orientdb219/databases/GratefulDeadConcerts\"", FontColor -> 
+                GrayLevel[0.4]]}], "\[ThinSpace]", 
+             StyleBox["\[RightAssociation]", 
+              GrayLevel[0.45]]}], LineBreakWithin -> Automatic], ",", 
+          StyleBox[
+           RowBox[{
+             StyleBox["\[LeftAssociation]", 
+              GrayLevel[0.45]], "\[ThinSpace]", 
+             RowBox[{
+               StyleBox["\"name\"", 
+                GrayLevel[0.3]], 
+               StyleBox["\[Rule]", 
+                GrayLevel[0.5]], 
+               StyleBox["\"DemoDB\"", FontColor -> GrayLevel[0.4]]}], ",", 
+             RowBox[{
+               StyleBox["\"type\"", 
+                GrayLevel[0.3]], 
+               StyleBox["\[Rule]", 
+                GrayLevel[0.5]], 
+               StyleBox[
+               "\"OLocalPaginatedStorage\"", FontColor -> GrayLevel[0.4]]}], 
+             ",", 
+             RowBox[{
+               StyleBox["\"path\"", 
+                GrayLevel[0.3]], 
+               StyleBox["\[Rule]", 
+                GrayLevel[0.5]], 
+               StyleBox[
+               "\"C:/orientdb219/databases/DemoDB\"", FontColor -> 
+                GrayLevel[0.4]]}], "\[ThinSpace]", 
              StyleBox["\[RightAssociation]", 
               GrayLevel[0.45]]}], LineBreakWithin -> Automatic], 
           "\[ThinSpace]", "}"}], LineBreakWithin -> Automatic]}, {
@@ -729,7 +807,8 @@ Cell[BoxData[
   Selectable->False]], "Output",
  CellChangeTimes->{{3.6435702472245874`*^9, 3.643570290246607*^9}, {
    3.643573362514527*^9, 3.643573378847535*^9}, 3.643647684101307*^9, {
-   3.648891851410322*^9, 3.6488918812783127`*^9}, 3.66045802594718*^9}]
+   3.648891851410322*^9, 3.6488918812783127`*^9}, 3.66045802594718*^9, 
+   3.664005157667369*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -862,7 +941,7 @@ not set value more than 50\"", FontColor -> GrayLevel[0.4]],
 runtime, but if does not enough to contain all pinned pages exception will be \
 thrown.\"", FontColor -> GrayLevel[0.4]], 
        InterpretationBox[
-        TagBox["13535", Short[#, 5]& ], 13535], 
+        TagBox["8538", Short[#, 5]& ], 8538], 
        InterpretationBox[
         TagBox["4096", Short[#, 5]& ], 4096], 
        InterpretationBox["True", True]}, {
@@ -969,7 +1048,8 @@ flush in ms.\"", FontColor -> GrayLevel[0.4]],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{3.648891892392005*^9, 3.66045803318003*^9}]
+ CellChangeTimes->{3.648891892392005*^9, 3.66045803318003*^9, 
+  3.664005160222268*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1034,7 +1114,7 @@ Cell[BoxData[
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellChangeTimes->{{3.648891915903941*^9, 3.6488919208511724`*^9}, 
-   3.660458044313649*^9}]
+   3.660458044313649*^9, 3.664005164289562*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1078,24 +1158,8 @@ Cell[BoxData[
         GrayLevel[0.3]], 
        StyleBox["\"driver\"", 
         GrayLevel[0.3]]}, {
-       StyleBox["\"5\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"/127.0.0.1:60826\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"GratefulDeadConcerts\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"admin\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"37\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"Listening\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"1970-01-01 01:59:59\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"Server status\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"1\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"1322\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"2015-12-30 11:48:07\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"http\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"\"", FontColor -> GrayLevel[0.4]]}, {
-       StyleBox["\"9\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"/127.0.0.1:60833\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"210\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"/127.0.0.1:51921\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"1\"", FontColor -> GrayLevel[0.4]], 
@@ -1106,7 +1170,23 @@ Cell[BoxData[
        StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"0\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"0\"", FontColor -> GrayLevel[0.4]], 
-       StyleBox["\"2015-12-30 11:53:45\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"2016-02-09 13:12:36\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"http\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"\"", FontColor -> GrayLevel[0.4]]}, {
+       StyleBox["\"205\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"/0:0:0:0:0:0:0:1:51841\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"DemoDB\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"admin\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"49\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"Listening\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"1970-01-01 01:59:59\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"Server status\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"0\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"75\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"2016-02-09 13:05:13\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"http\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"-\"", FontColor -> GrayLevel[0.4]], 
        StyleBox["\"\"", FontColor -> GrayLevel[0.4]]}, {
@@ -1155,7 +1235,7 @@ Cell[BoxData[
   Selectable->False]], "Output",
  CellChangeTimes->{
   3.6488919607984753`*^9, {3.6488920253948865`*^9, 3.648892034402298*^9}, 
-   3.660458053630369*^9}]
+   3.660458053630369*^9, 3.66400516618404*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -1165,13 +1245,13 @@ Cell["Database Operations", "Section",
  CellChangeTimes->{{3.643570615710514*^9, 3.643570617225729*^9}, {
   3.643570858999178*^9, 3.643570863079794*^9}, {3.64889217531437*^9, 
   3.6488921766264334`*^9}, {3.648892308291537*^9, 3.6488923123463016`*^9}},
- CellTags->"c:9"],
+ CellTags->"c:6"],
 
 Cell[CellGroupData[{
 
 Cell["Create Database", "Subsubsection",
  CellChangeTimes->{{3.64356381894558*^9, 3.643563823103348*^9}},
- CellTags->"c:10"],
+ CellTags->"c:7"],
 
 Cell[CellGroupData[{
 
@@ -1210,7 +1290,7 @@ Cell[BoxData[
                 GrayLevel[0.3]], 
                StyleBox["\[Rule]", 
                 GrayLevel[0.5]], 
-               StyleBox["\"OSchedule\"", FontColor -> GrayLevel[0.4]]}], ",", 
+               StyleBox["\"OIdentity\"", FontColor -> GrayLevel[0.4]]}], ",", 
              RowBox[{
                StyleBox["\"superClass\"", 
                 GrayLevel[0.3]], 
@@ -1228,7 +1308,7 @@ Cell[BoxData[
                StyleBox["\[Rule]", 
                 GrayLevel[0.5]], "\[ThinSpace]\[Ellipsis]"}], ",", 
              StyleBox[
-              SubscriptBox["\[CenterEllipsis]", "4"], 
+              SubscriptBox["\[CenterEllipsis]", "3"], 
               GrayLevel[0.5]], "\[ThinSpace]", 
              StyleBox["\[RightAssociation]", 
               GrayLevel[0.45]]}], LineBreakWithin -> Automatic], ",", 
@@ -1473,7 +1553,7 @@ Cell[BoxData[
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellChangeTimes->{3.64889238724011*^9, 3.648892436921907*^9, 
-  3.660458088010063*^9}]
+  3.660458088010063*^9, 3.6640051783768916`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -1481,7 +1561,7 @@ Cell[CellGroupData[{
 
 Cell["Get Databases", "Subsubsection",
  CellChangeTimes->{{3.643572378985208*^9, 3.6435723809959216`*^9}},
- CellTags->"c:11"],
+ CellTags->"c:8"],
 
 Cell[CellGroupData[{
 
@@ -1507,8 +1587,9 @@ Cell[BoxData[
         RowBox[{"{", "\[ThinSpace]", 
           StyleBox["\"GratefulDeadConcerts\"", FontColor -> GrayLevel[0.4]], 
           ",", 
-          StyleBox["\"demo\"", FontColor -> GrayLevel[0.4]], "\[ThinSpace]", 
-          "}"}], LineBreakWithin -> Automatic]}, {
+          StyleBox["\"demo\"", FontColor -> GrayLevel[0.4]], ",", 
+          StyleBox["\"DemoDB\"", FontColor -> GrayLevel[0.4]], "\[ThinSpace]",
+           "}"}], LineBreakWithin -> Automatic]}, {
        StyleBox["\"@fieldTypes\"", 
         GrayLevel[0.3]], 
        StyleBox["\"databases=e\"", FontColor -> GrayLevel[0.4]]}, {
@@ -1554,7 +1635,7 @@ Cell[BoxData[
   Selectable->False]], "Output",
  CellChangeTimes->{3.6435706668112955`*^9, 3.643573385820386*^9, 
   3.643647688882557*^9, 3.6488922359451447`*^9, 3.6488923942278676`*^9, 
-  3.66045811609478*^9}]
+  3.66045811609478*^9, 3.6640051818142967`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -1564,7 +1645,7 @@ Cell["Get Single Database", "Subsubsection",
  CellChangeTimes->{{3.6435723841425257`*^9, 3.643572386082204*^9}, {
   3.648892471328153*^9, 3.648892472451956*^9}, {3.6488925178088765`*^9, 
   3.64889251829165*^9}},
- CellTags->"c:12"],
+ CellTags->"c:9"],
 
 Cell[CellGroupData[{
 
@@ -1572,12 +1653,13 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"ODBapi", "[", 
    RowBox[{
-    RowBox[{"com", "\[Rule]", "\"\<getDatabase\>\""}], ",", 
+    RowBox[{"com", "\[Rule]", "\"\<getDatabases\>\""}], ",", 
     RowBox[{"db", "\[Rule]", " ", "\"\<demo\>\""}]}], "]"}], "//", 
   "ODBgetDataset"}]], "Input",
  CellChangeTimes->{{3.643570677473751*^9, 3.643570705769176*^9}, {
-  3.643570743855533*^9, 3.643570758172119*^9}, {3.6488922613154135`*^9, 
-  3.6488922717236676`*^9}, {3.6604581359360657`*^9, 3.6604581363053503`*^9}}],
+   3.643570743855533*^9, 3.643570758172119*^9}, {3.6488922613154135`*^9, 
+   3.6488922717236676`*^9}, {3.6604581359360657`*^9, 3.6604581363053503`*^9}, 
+   3.664005198667077*^9}],
 
 Cell[BoxData[
  TagBox[
@@ -1593,28 +1675,28 @@ Cell[BoxData[
              GrayLevel[0.3]], 
             StyleBox["\[Rule]", 
              GrayLevel[0.5]], 
-            StyleBox["\"2.1.8\"", FontColor -> GrayLevel[0.4]]}], ",", 
+            StyleBox["\"2.1.9-SNAPSHOT\"", FontColor -> GrayLevel[0.4]]}], 
+          ",", 
           RowBox[{
             StyleBox["\"build\"", 
              GrayLevel[0.3]], 
             StyleBox["\[Rule]", 
              GrayLevel[0.5]], 
             StyleBox[
-            "\"2.1.x@r; 2015-12-17 11:51:38+0100\"", FontColor -> 
+            "\"2.1.x@r${buildNumber}; 2016-01-07 10:51:24+0000\"", FontColor -> 
              GrayLevel[0.4]]}], ",", 
           RowBox[{
             StyleBox["\"osName\"", 
              GrayLevel[0.3]], 
             StyleBox["\[Rule]", 
              GrayLevel[0.5]], 
-            StyleBox["\"Linux\"", FontColor -> GrayLevel[0.4]]}], ",", 
+            StyleBox["\"Windows 10\"", FontColor -> GrayLevel[0.4]]}], ",", 
           RowBox[{
             StyleBox["\"osVersion\"", 
              GrayLevel[0.3]], 
             StyleBox["\[Rule]", 
              GrayLevel[0.5]], 
-            StyleBox["\"3.16.0-30-generic\"", FontColor -> GrayLevel[0.4]]}], 
-          ",", 
+            StyleBox["\"10.0\"", FontColor -> GrayLevel[0.4]]}], ",", 
           RowBox[{
             StyleBox["\"osArch\"", 
              GrayLevel[0.3]], 
@@ -1833,9 +1915,10 @@ Cell[BoxData[
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{3.6435707073187137`*^9, 3.643570761306119*^9, 
-  3.643573391620023*^9, 3.6436476959030647`*^9, 3.648892272608262*^9, 
-  3.660458138262751*^9}]
+ CellChangeTimes->{
+  3.6435707073187137`*^9, 3.643570761306119*^9, 3.643573391620023*^9, 
+   3.6436476959030647`*^9, 3.648892272608262*^9, 3.660458138262751*^9, {
+   3.664005187807768*^9, 3.6640052011901417`*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1845,7 +1928,7 @@ Cell[CellGroupData[{
 Cell["Classes Operations", "Section",
  CellChangeTimes->{{3.6435708680144577`*^9, 3.643570874857361*^9}, {
   3.649567447566927*^9, 3.64956745181888*^9}},
- CellTags->"c:15"],
+ CellTags->"c:10"],
 
 Cell[BoxData[
  RowBox[{
@@ -1860,7 +1943,7 @@ Cell["Add/Delete/Add/Get Class", "Subsubsection",
  CellChangeTimes->{{3.64917682639786*^9, 3.649176843751376*^9}, {
   3.660458251047517*^9, 3.66045828576717*^9}, {3.660458463888015*^9, 
   3.6604584655196753`*^9}},
- CellTags->"c:16"],
+ CellTags->"c:11"],
 
 Cell[CellGroupData[{
 
@@ -1884,7 +1967,7 @@ Cell[BoxData[
   3.643571296216172*^9, 3.643573615706831*^9, 3.6436477880668*^9, 
    3.64889291400602*^9, 3.6488932826982117`*^9, 3.6491769181654387`*^9, 
    3.649176958848773*^9, 3.660458312791422*^9, 3.660458359715454*^9, {
-   3.6604586096486273`*^9, 3.660458619636621*^9}}]
+   3.6604586096486273`*^9, 3.660458619636621*^9}, 3.6640090536025567`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1904,7 +1987,7 @@ Cell[BoxData[
 \"value\\\":true}]}\"\>", ",", "200"}], "}"}]], "Output",
  CellChangeTimes->{
   3.649176929592196*^9, 3.66045843630405*^9, {3.6604586143138123`*^9, 
-   3.660458624358694*^9}}]
+   3.660458624358694*^9}, 3.6640090582446756`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1921,7 +2004,7 @@ Cell[BoxData[
   RowBox[{"\<\"{\\\"result\\\":[{\\\"@type\\\":\\\"d\\\",\\\"@version\\\":0,\\\
 \"value\\\":10}]}\"\>", ",", "200"}], "}"}]], "Output",
  CellChangeTimes->{3.660458490025831*^9, 3.6604586277804947`*^9, 
-  3.660458803657551*^9}]
+  3.660458803657551*^9, 3.6640090618986197`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2020,7 +2103,7 @@ Cell[BoxData[
   3.643570964013337*^9, 3.6435736026189404`*^9, 3.6436477784960623`*^9, 
    3.64889287223516*^9, {3.648892922047375*^9, 3.648892927719016*^9}, 
    3.6488932845259304`*^9, 3.6491769611874475`*^9, 3.660458495988367*^9, 
-   3.6604586311983223`*^9, 3.660458806363434*^9}]
+   3.6604586311983223`*^9, 3.660458806363434*^9, 3.664009065369285*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -2030,7 +2113,7 @@ Cell[CellGroupData[{
 Cell["OrientDB OSQL Operations", "Section",
  CellChangeTimes->{{3.6429680297191706`*^9, 3.6429680361290894`*^9}, {
   3.648966501415877*^9, 3.6489665041590405`*^9}},
- CellTags->"c:19"],
+ CellTags->"c:12"],
 
 Cell[CellGroupData[{
 
@@ -2038,7 +2121,7 @@ Cell["OrientDB - POST OSQL Command", "Subsection",
  CellChangeTimes->{{3.6429285038951674`*^9, 3.6429285052232924`*^9}, {
    3.642958531477273*^9, 3.64295859678608*^9}, {3.6429586671933064`*^9, 
    3.6429586746513147`*^9}, 3.6488956804786215`*^9},
- CellTags->"c:20"],
+ CellTags->"c:13"],
 
 Cell[CellGroupData[{
 
@@ -2048,7 +2131,7 @@ Cell["Make a list of OrientDB SQL Commands (OSQL)", "Subsubsection",
   3.642968752052253*^9}, {3.6435610697296424`*^9, 3.643561076928641*^9}, {
   3.648893297051338*^9, 3.648893303957661*^9}, {3.6489665307947826`*^9, 
   3.648966535437361*^9}},
- CellTags->"c:21"],
+ CellTags->"c:14"],
 
 Cell[BoxData[
  RowBox[{
@@ -2096,7 +2179,7 @@ Cell[CellGroupData[{
 Cell["Execute OSQL commands one by one", "Subsubsection",
  CellChangeTimes->{{3.643561085825311*^9, 3.643561090714974*^9}, {
   3.648893311198781*^9, 3.6488933159551287`*^9}},
- CellTags->"c:22"],
+ CellTags->"c:15"],
 
 Cell[CellGroupData[{
 
@@ -2108,7 +2191,7 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"ODBapi", "[", 
        RowBox[{
-        RowBox[{"com", "\[Rule]", "\"\<addOSQLCommand\>\""}], ",", 
+        RowBox[{"com", "\[Rule]", "\"\<addOSQL\>\""}], ",", 
         RowBox[{"sql", "\[Rule]", "#"}]}], "]"}], "&"}], "/@", 
      "osqlCommmands"}], ")"}], "//", "TableForm"}]}]], "Input",
  CellChangeTimes->{{3.6435583144350853`*^9, 3.6435583710129995`*^9}, {
@@ -2118,7 +2201,8 @@ Cell[BoxData[
    3.648893107020714*^9, 3.6488931082511215`*^9}, {3.6488931389646835`*^9, 
    3.6488931730609217`*^9}, {3.6489665533191967`*^9, 3.6489665542723217`*^9}, 
    3.6491769819480968`*^9, 3.660458686999889*^9, {3.660458741312437*^9, 
-   3.660458765816066*^9}, 3.6604588434972153`*^9}],
+   3.660458765816066*^9}, 3.6604588434972153`*^9, {3.6640225174015827`*^9, 
+   3.6640225188597627`*^9}}],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -2154,7 +2238,7 @@ value\\\":1}]}\"\>", "200"}
   Function[BoxForm`e$, 
    TableForm[BoxForm`e$]]]], "Output",
  CellChangeTimes->{{3.660458753339501*^9, 3.660458767549267*^9}, 
-   3.660458811525837*^9}]
+   3.660458811525837*^9, 3.664009080296277*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2162,21 +2246,22 @@ Cell[CellGroupData[{
 
 Cell["Set permanently the database and command parameters", "Subsubsection",
  CellChangeTimes->{{3.6435611157500706`*^9, 3.6435611553039956`*^9}},
- CellTags->"c:23"],
+ CellTags->"c:16"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"SetOptions", "[", 
    RowBox[{"ODBapi", ",", 
     RowBox[{"db", "\[Rule]", "\"\<demo\>\""}], ",", 
-    RowBox[{"com", "\[Rule]", " ", "\"\<addOSQLCommand\>\""}]}], "]"}], 
+    RowBox[{"com", "\[Rule]", " ", "\"\<addOSQL\>\""}]}], "]"}], 
   ";"}]], "Input",
  CellChangeTimes->{{3.6435584330129995`*^9, 3.6435584649915147`*^9}, {
    3.643559183724687*^9, 3.6435591972377944`*^9}, {3.643563638036563*^9, 
    3.643563640530855*^9}, {3.6435676587062025`*^9, 3.643567661553177*^9}, 
    3.6435689447675204`*^9, {3.6488935227066298`*^9, 3.648893523266982*^9}, {
    3.648966653011973*^9, 3.648966654246348*^9}, 3.649177033031104*^9, {
-   3.660458902120522*^9, 3.660458902503416*^9}}]
+   3.660458902120522*^9, 3.660458902503416*^9}, {3.664009260913355*^9, 
+   3.664009267838684*^9}, {3.6640225315377135`*^9, 3.6640225331601076`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2184,7 +2269,7 @@ Cell[CellGroupData[{
 Cell["Get Person records", "Subsubsection",
  CellChangeTimes->{{3.648893508563796*^9, 3.648893513857775*^9}, {
   3.6488935697603016`*^9, 3.648893578124175*^9}},
- CellTags->"c:24"],
+ CellTags->"c:17"],
 
 Cell[CellGroupData[{
 
@@ -2332,7 +2417,8 @@ Cell[BoxData[
   3.6435681499165845`*^9, 3.6435683574613066`*^9, {3.643573646033003*^9, 
    3.643573656882612*^9}, 3.6436478479393883`*^9, {3.6488935305229826`*^9, 
    3.648893543368407*^9}, 3.6488935891200256`*^9, {3.6491770138211436`*^9, 
-   3.6491770367518077`*^9}, 3.660458915696438*^9}]
+   3.6491770367518077`*^9}, 3.660458915696438*^9, 3.664009086464473*^9, 
+   3.6640092767067146`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -2343,13 +2429,13 @@ Cell["OrientDB - POST OSQL Script", "Subsection",
  CellChangeTimes->{{3.642959035581995*^9, 3.6429590424384403`*^9}, {
    3.6429699666887393`*^9, 3.64296997841499*^9}, {3.6435662423220797`*^9, 
    3.643566243439148*^9}, 3.6488956756368246`*^9},
- CellTags->"c:25"],
+ CellTags->"c:18"],
 
 Cell[CellGroupData[{
 
 Cell["Delete Database", "Subsubsection",
  CellChangeTimes->{{3.6435649202230453`*^9, 3.643564928539524*^9}},
- CellTags->"c:26"],
+ CellTags->"c:19"],
 
 Cell[CellGroupData[{
 
@@ -2362,20 +2448,16 @@ Cell[BoxData[
    RowBox[{"pwd", "\[Rule]", "\"\<123\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6435648104559*^9, 3.6435648563865438`*^9}, 
    3.643568948033146*^9, {3.6488938342098365`*^9, 3.648893836213747*^9}, 
-   3.6491771403999023`*^9}],
+   3.6491771403999023`*^9, {3.664022549848527*^9, 3.6640225548637085`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"{\\r\\n  \\\"errors\\\": [\\r\\n    {\\r\\n      \\\"code\\\": \
-500,\\r\\n      \\\"reason\\\": 500,\\r\\n      \\\"content\\\": \
-\\\"com.orientechnologies.orient.core.exception.OConfigurationException: \
-Database 'MemberArticleDB' is not configured on server \
-(home=/home/apps/orientdb218/databases/)\\\"\\r\\n    }\\r\\n  ]\\r\\n}\"\>", 
-   ",", "500"}], "}"}]], "Output",
+  RowBox[{"\<\"\"\>", ",", "204"}], "}"}]], "Output",
  CellChangeTimes->{{3.6435648440618663`*^9, 3.643564891370713*^9}, 
    3.6435649365314074`*^9, 3.6435684499756055`*^9, 3.6435685032292957`*^9, 
    3.6435736903076*^9, 3.643647885355404*^9, 3.648893837501787*^9, 
-   3.649177087613136*^9, 3.6491771417054577`*^9, 3.660458983681655*^9}]
+   3.649177087613136*^9, 3.6491771417054577`*^9, 3.660458983681655*^9, 
+   3.6640093497615833`*^9, 3.6640226301393213`*^9, 3.6640227386496534`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2383,7 +2465,7 @@ Cell[CellGroupData[{
 
 Cell["Create Database", "Subsubsection",
  CellChangeTimes->{{3.64356381894558*^9, 3.643563823103348*^9}},
- CellTags->"c:27"],
+ CellTags->"c:20"],
 
 Cell[CellGroupData[{
 
@@ -2684,7 +2766,7 @@ Cell[BoxData[
  CellChangeTimes->{
   3.6435737132956038`*^9, 3.6436479019677086`*^9, 3.648893895893935*^9, 
    3.649177065969581*^9, {3.6491771294512205`*^9, 3.649177153258671*^9}, 
-   3.6604590736479807`*^9}]
+   3.6604590736479807`*^9, 3.6640093768150043`*^9, 3.664022747116541*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2696,7 +2778,7 @@ Cell["Create Classes and Properties with an OrientDB SQL script", \
   3.6430164187297926`*^9, 3.6430164304449415`*^9}, {3.6430164622619457`*^9, 
   3.64301646521797*^9}, {3.643565157656269*^9, 3.643565170264349*^9}, {
   3.6488939044568815`*^9, 3.648893910507201*^9}},
- CellTags->"c:28"],
+ CellTags->"c:21"],
 
 Cell[TextData[StyleBox["Make an OSQL Batch Script to Create the Graph \
 Database",
@@ -2738,9 +2820,10 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"ODBapi", "[", 
    RowBox[{
-    RowBox[{"com", "\[Rule]", "\"\<addOSQLScript\>\""}], ",", 
+    RowBox[{"com", "\[Rule]", "\"\<addOSQL\>\""}], ",", 
     RowBox[{"db", "\[Rule]", "\"\<MemberArticleDB\>\""}], ",", 
-    RowBox[{"sql", "\[Rule]", " ", "osqlScriptCreateDB"}]}], "]"}], "//", 
+    RowBox[{"sql", "\[Rule]", " ", "osqlScriptCreateDB"}], ",", " ", 
+    RowBox[{"mode", "\[Rule]", "\"\<BATCH\>\""}]}], "]"}], "//", 
   "ODBgetDataset"}]], "Input",
  CellChangeTimes->{{3.6435653018706427`*^9, 3.6435653235794306`*^9}, {
    3.6435655010129466`*^9, 3.643565520631939*^9}, 3.6435655512774467`*^9, {
@@ -2748,7 +2831,8 @@ Cell[BoxData[
    3.6435657538805447`*^9}, 3.6435689501483364`*^9, {3.64364791110931*^9, 
    3.643647912249935*^9}, {3.6488942234020596`*^9, 3.648894253925497*^9}, {
    3.648966606942244*^9, 3.6489666079266186`*^9}, 3.6490608522901096`*^9, {
-   3.6491771863514442`*^9, 3.649177190383671*^9}}],
+   3.6491771863514442`*^9, 3.649177190383671*^9}, {3.664022579886558*^9, 
+   3.6640226055192976`*^9}, {3.664022810727692*^9, 3.6640228116989636`*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -2801,7 +2885,8 @@ Cell[BoxData[
   Selectable->False]], "Output",
  CellChangeTimes->{3.643565797915999*^9, 3.6435685424582157`*^9, 
   3.643573725103221*^9, 3.6436479171639977`*^9, 3.64889426571163*^9, 
-  3.64917719267078*^9, 3.660459102986287*^9}]
+  3.64917719267078*^9, 3.660459102986287*^9, 3.6640093951994486`*^9, 
+  3.664022783630867*^9, 3.6640228141553516`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2810,7 +2895,7 @@ Cell[CellGroupData[{
 Cell["Populate with a few MEMBERs and an ARTICLE", "Subsubsection",
  CellChangeTimes->{{3.6430169238160872`*^9, 3.6430169329117284`*^9}, {
   3.643565584847294*^9, 3.6435656183470917`*^9}},
- CellTags->"c:29"],
+ CellTags->"c:22"],
 
 Cell[BoxData[
  RowBox[{
@@ -2906,7 +2991,8 @@ Cell[BoxData[
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{3.6491772307616005`*^9, 3.6604591737467403`*^9}]
+ CellChangeTimes->{3.6491772307616005`*^9, 3.6604591737467403`*^9, 
+  3.6640094213493557`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2915,7 +3001,7 @@ Cell[CellGroupData[{
 Cell["Create Edge - MEMBER isAuthorOf ARTICLE", "Subsubsection",
  CellChangeTimes->{{3.6430165372399936`*^9, 3.643016541622704*^9}, 
    3.6430168272732415`*^9, {3.643566143689946*^9, 3.6435661541166015`*^9}},
- CellTags->"c:30"],
+ CellTags->"c:23"],
 
 Cell[BoxData[
  RowBox[{
@@ -3003,7 +3089,7 @@ Cell[BoxData[
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{3.660459199306467*^9}]
+ CellChangeTimes->{3.660459199306467*^9, 3.664009434740761*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -3013,13 +3099,13 @@ Cell[CellGroupData[{
 Cell["OrientDB - GET OSQL Script", "Subsection",
  CellChangeTimes->{{3.6488947303183985`*^9, 3.648894733277783*^9}, {
   3.648895664252203*^9, 3.6488956718804646`*^9}},
- CellTags->"c:31"],
+ CellTags->"c:24"],
 
 Cell[CellGroupData[{
 
 Cell["Read-Only OrientDB SQL Command", "Subsubsection",
  CellChangeTimes->{{3.648895740408309*^9, 3.6488957802930746`*^9}},
- CellTags->"c:32"],
+ CellTags->"c:25"],
 
 Cell[TextData[StyleBox["These are idempotent commands like SQL SELECT and \
 TRAVERSE",
@@ -3032,7 +3118,7 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"ODBapi", "[", "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"com", "\[Rule]", " ", "\"\<getOSQLCommand\>\""}], ",", 
+    RowBox[{"com", "\[Rule]", " ", "\"\<getOSQL\>\""}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"db", "\[Rule]", " ", "\"\<MemberArticleDB\>\""}], ",", " ", 
     "\[IndentingNewLine]", 
@@ -3041,7 +3127,8 @@ Cell[BoxData[
     RowBox[{"sql", "\[Rule]", " ", "\"\<select from Member\>\""}]}], "]"}], "//",
    "ODBgetDataset"}]], "Input",
  CellChangeTimes->{{3.6488956458848376`*^9, 3.6488956472629623`*^9}, 
-   3.649060893258688*^9, {3.6491773184539833`*^9, 3.649177322222538*^9}}],
+   3.649060893258688*^9, {3.6491773184539833`*^9, 3.649177322222538*^9}, {
+   3.6640216151435738`*^9, 3.6640216165545826`*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -3232,7 +3319,7 @@ Cell[BoxData[
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellChangeTimes->{3.648895650774193*^9, 3.649177324425663*^9, 
-  3.660459237668961*^9}]
+  3.660459237668961*^9, 3.664009468928819*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3241,7 +3328,7 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"ODBapi", "[", "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"com", "\[Rule]", " ", "\"\<getOSQLCommand\>\""}], ",", 
+    RowBox[{"com", "\[Rule]", " ", "\"\<getOSQL\>\""}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"db", "\[Rule]", " ", "\"\<MemberArticleDB\>\""}], ",", " ", 
     "\[IndentingNewLine]", 
@@ -3251,7 +3338,8 @@ Cell[BoxData[
    "ODBgetDataset"}]], "Input",
  CellChangeTimes->{{3.6488949034203806`*^9, 3.648894912009778*^9}, {
    3.6488957002374105`*^9, 3.6488957014405355`*^9}, 3.6490608971132174`*^9, {
-   3.649177330443241*^9, 3.6491773342409954`*^9}}],
+   3.649177330443241*^9, 3.6491773342409954`*^9}, {3.664021624495178*^9, 
+   3.6640216262297525`*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -3324,28 +3412,23 @@ Cell[BoxData[
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellChangeTimes->{3.648894913806651*^9, 3.6488957042667074`*^9, 
-  3.6491773364857216`*^9, 3.6604592594480057`*^9}]
+  3.6491773364857216`*^9, 3.6604592594480057`*^9, 3.6640094692698283`*^9}]
 }, Open  ]]
-}, Open  ]],
-
-Cell["Database/Class Operations", "Subsubsection",
- CellChangeTimes->{{3.660460620344247*^9, 3.6604606253639727`*^9}}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-ShowPageBreaks->False,
 WindowSize->{1239, 865},
-WindowMargins->{{Automatic, 1698}, {0, Automatic}},
+WindowMargins->{{Automatic, 19}, {7, Automatic}},
 PrintingCopies->1,
 PrintingStartingPageNumber->1,
 PrintingPageRange->{1, 32000},
 PrintingOptions->{"Magnification"->1.,
 "PaperOrientation"->"Landscape",
-"PaperSize"->{841.8, 595.2},
-"PrintingMargins"->{{14.173228499999999`, 14.173228499999999`}, \
-{42.519685499999994`, 42.519685499999994`}}},
+"PaperSize"->{841.8, 595.1999999999999},
+"PrintingMargins"->5.6692914},
 TaggingRules->{
  "DocuToolsSettings" -> {
    "$ApplicationName" -> "NumericalAnalysis", "$LinkBase" -> 
@@ -3354,14 +3437,15 @@ TaggingRules->{
 NumericalAnalysis\\", "$DocumentationDirectory" -> 
     "C:\\Users\\athanassios\\WolframWorkspaces\\Base\\NumericalCalculus\\\
 NumericalAnalysis\\Documentation\\English\\"}, 
-  "PaginationCache" -> {{2015, 12, 30, 12, 33, 26.496956`8.175770966634015}, {
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3,
-     3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 
-    7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 
-    11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 
-    14, 14}, Automatic}},
+  "PaginationCache" -> {{2016, 2, 9, 14, 29, 32.7398946`9.267652178826884}, {
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2,
+     2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 
+    3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+     6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 
+    9, 9, 9, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 
+    12, 12, 12}, Automatic}},
 Magnification->1.,
-FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 6, 2015)",
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[StyleDefinitions -> "Default.nb"]], 
@@ -3371,7 +3455,7 @@ StyleDefinitions->Notebook[{
     StyleData["Subitem"], MenuCommandKey -> "9"], 
    Cell[
     StyleData["Subsubitem"]]}, Visible -> False, FrontEndVersion -> 
-  "10.2 for Linux x86 (64-bit) (July 6, 2015)", StyleDefinitions -> 
+  "10.3 for Microsoft Windows (64-bit) (December 10, 2015)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"]
 ]
 (* End of Notebook Content *)
@@ -3380,344 +3464,349 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "c:1"->{
-  Cell[580, 22, 521, 8, 96, "Title",
+  Cell[580, 22, 521, 8, 101, "Title",
    CellTags->"c:1"]},
- "c:10"->{
-  Cell[43491, 1171, 124, 2, 37, "Subsubsection",
-   CellTags->"c:10"]},
- "c:11"->{
-  Cell[55917, 1481, 125, 2, 37, "Subsubsection",
-   CellTags->"c:11"]},
- "c:12"->{
-  Cell[59104, 1562, 230, 4, 37, "Subsubsection",
-   CellTags->"c:12"]},
- "c:15"->{
-  Cell[70185, 1844, 172, 3, 67, "Section",
-   CellTags->"c:15"]},
- "c:16"->{
-  Cell[70604, 1858, 232, 4, 37, "Subsubsection",
-   CellTags->"c:16"]},
- "c:19"->{
-  Cell[77300, 2029, 183, 3, 67, "Section",
-   CellTags->"c:19"]},
  "c:2"->{
-  Cell[2191, 62, 123, 2, 37, "Subsubsection",
+  Cell[2214, 62, 123, 2, 39, "Subsubsection",
    CellTags->"c:2"]},
- "c:20"->{
-  Cell[77508, 2036, 266, 4, 47, "Subsection",
-   CellTags->"c:20"]},
- "c:21"->{
-  Cell[77799, 2044, 401, 6, 37, "Subsubsection",
-   CellTags->"c:21"]},
- "c:22"->{
-  Cell[80585, 2095, 193, 3, 37, "Subsubsection",
-   CellTags->"c:22"]},
- "c:23"->{
-  Cell[83438, 2162, 165, 2, 37, "Subsubsection",
-   CellTags->"c:23"]},
- "c:24"->{
-  Cell[84286, 2183, 179, 3, 37, "Subsubsection",
-   CellTags->"c:24"]},
- "c:25"->{
-  Cell[90666, 2341, 263, 4, 47, "Subsection",
-   CellTags->"c:25"]},
- "c:26"->{
-  Cell[90954, 2349, 127, 2, 37, "Subsubsection",
-   CellTags->"c:26"]},
- "c:27"->{
-  Cell[92321, 2383, 124, 2, 37, "Subsubsection",
-   CellTags->"c:27"]},
- "c:28"->{
-  Cell[104667, 2692, 371, 6, 37, "Subsubsection",
-   CellTags->"c:28"]},
- "c:29"->{
-  Cell[110020, 2809, 207, 3, 37, "Subsubsection",
-   CellTags->"c:29"]},
  "c:3"->{
-  Cell[9514, 349, 116, 2, 67, "Section",
+  Cell[3501, 97, 116, 2, 49, "Subsection",
    CellTags->"c:3"]},
- "c:30"->{
-  Cell[114499, 2914, 227, 3, 37, "Subsubsection",
-   CellTags->"c:30"]},
- "c:31"->{
-  Cell[118382, 3012, 186, 3, 47, "Subsection",
-   CellTags->"c:31"]},
- "c:32"->{
-  Cell[118593, 3019, 142, 2, 37, "Subsubsection",
-   CellTags->"c:32"]},
+ "c:4"->{
+  Cell[10489, 379, 116, 2, 70, "Section",
+   CellTags->"c:4"]},
+ "c:5"->{
+  Cell[16395, 527, 221, 4, 70, "Section",
+   CellTags->"c:5"]},
+ "c:6"->{
+  Cell[46428, 1243, 269, 4, 70, "Section",
+   CellTags->"c:6"]},
+ "c:7"->{
+  Cell[46722, 1251, 123, 2, 39, "Subsubsection",
+   CellTags->"c:7"]},
  "c:8"->{
-  Cell[14278, 475, 221, 4, 67, "Section",
+  Cell[59171, 1561, 124, 2, 39, "Subsubsection",
    CellTags->"c:8"]},
  "c:9"->{
-  Cell[43197, 1163, 269, 4, 67, "Section",
-   CellTags->"c:9"]}
+  Cell[62450, 1643, 229, 4, 39, "Subsubsection",
+   CellTags->"c:9"]},
+ "c:10"->{
+  Cell[73627, 1927, 172, 3, 70, "Section",
+   CellTags->"c:10"]},
+ "c:11"->{
+  Cell[74046, 1941, 232, 4, 39, "Subsubsection",
+   CellTags->"c:11"]},
+ "c:12"->{
+  Cell[80836, 2112, 183, 3, 70, "Section",
+   CellTags->"c:12"]},
+ "c:13"->{
+  Cell[81044, 2119, 266, 4, 49, "Subsection",
+   CellTags->"c:13"]},
+ "c:14"->{
+  Cell[81335, 2127, 401, 6, 39, "Subsubsection",
+   CellTags->"c:14"]},
+ "c:15"->{
+  Cell[84121, 2178, 193, 3, 39, "Subsubsection",
+   CellTags->"c:15"]},
+ "c:16"->{
+  Cell[87043, 2246, 165, 2, 39, "Subsubsection",
+   CellTags->"c:16"]},
+ "c:17"->{
+  Cell[87984, 2268, 179, 3, 39, "Subsubsection",
+   CellTags->"c:17"]},
+ "c:18"->{
+  Cell[94414, 2427, 263, 4, 49, "Subsection",
+   CellTags->"c:18"]},
+ "c:19"->{
+  Cell[94702, 2435, 127, 2, 39, "Subsubsection",
+   CellTags->"c:19"]},
+ "c:20"->{
+  Cell[95854, 2465, 124, 2, 39, "Subsubsection",
+   CellTags->"c:20"]},
+ "c:21"->{
+  Cell[108246, 2774, 371, 6, 39, "Subsubsection",
+   CellTags->"c:21"]},
+ "c:22"->{
+  Cell[113827, 2894, 207, 3, 39, "Subsubsection",
+   CellTags->"c:22"]},
+ "c:23"->{
+  Cell[118333, 3000, 227, 3, 39, "Subsubsection",
+   CellTags->"c:23"]},
+ "c:24"->{
+  Cell[122238, 3098, 186, 3, 49, "Subsection",
+   CellTags->"c:24"]},
+ "c:25"->{
+  Cell[122449, 3105, 142, 2, 39, "Subsubsection",
+   CellTags->"c:25"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"c:1", 133466, 3381},
- {"c:10", 133536, 3384},
- {"c:11", 133619, 3387},
- {"c:12", 133702, 3390},
- {"c:15", 133785, 3393},
- {"c:16", 133862, 3396},
- {"c:19", 133945, 3399},
- {"c:2", 134021, 3402},
- {"c:20", 134100, 3405},
- {"c:21", 134180, 3408},
- {"c:22", 134263, 3411},
- {"c:23", 134346, 3414},
- {"c:24", 134429, 3417},
- {"c:25", 134512, 3420},
- {"c:26", 134592, 3423},
- {"c:27", 134675, 3426},
- {"c:28", 134758, 3429},
- {"c:29", 134842, 3432},
- {"c:3", 134925, 3435},
- {"c:30", 134999, 3438},
- {"c:31", 135083, 3441},
- {"c:32", 135164, 3444},
- {"c:8", 135247, 3447},
- {"c:9", 135321, 3450}
+ {"c:1", 137353, 3465},
+ {"c:2", 137423, 3468},
+ {"c:3", 137501, 3471},
+ {"c:4", 137576, 3474},
+ {"c:5", 137650, 3477},
+ {"c:6", 137724, 3480},
+ {"c:7", 137799, 3483},
+ {"c:8", 137880, 3486},
+ {"c:9", 137961, 3489},
+ {"c:10", 138043, 3492},
+ {"c:11", 138120, 3495},
+ {"c:12", 138203, 3498},
+ {"c:13", 138280, 3501},
+ {"c:14", 138360, 3504},
+ {"c:15", 138443, 3507},
+ {"c:16", 138526, 3510},
+ {"c:17", 138609, 3513},
+ {"c:18", 138692, 3516},
+ {"c:19", 138772, 3519},
+ {"c:20", 138855, 3522},
+ {"c:21", 138938, 3525},
+ {"c:22", 139022, 3528},
+ {"c:23", 139106, 3531},
+ {"c:24", 139190, 3534},
+ {"c:25", 139271, 3537}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 521, 8, 96, "Title",
+Cell[580, 22, 521, 8, 101, "Title",
  CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[1126, 34, 477, 8, 32, "Input"],
-Cell[1606, 44, 410, 8, 36, "Output"]
+Cell[1126, 34, 477, 8, 31, "Input"],
+Cell[1606, 44, 433, 8, 35, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2053, 57, 113, 1, 69, "Chapter"],
+Cell[2076, 57, 113, 1, 72, "Chapter"],
 Cell[CellGroupData[{
-Cell[2191, 62, 123, 2, 37, "Subsubsection",
+Cell[2214, 62, 123, 2, 39, "Subsubsection",
  CellTags->"c:2"],
-Cell[2317, 66, 76, 1, 32, "Input"],
-Cell[2396, 69, 126, 2, 32, "Input"],
-Cell[2525, 73, 701, 13, 77, "Input"],
-Cell[3229, 88, 212, 4, 32, "Input"]
+Cell[2340, 66, 76, 1, 64, "Input"],
+Cell[2419, 69, 126, 2, 31, "Input"],
+Cell[2548, 73, 701, 13, 72, "Input"],
+Cell[3252, 88, 212, 4, 31, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3478, 97, 98, 1, 47, "Subsection"],
-Cell[3579, 100, 249, 9, 32, "Input"],
-Cell[3831, 111, 246, 9, 32, "Input"],
-Cell[4080, 122, 16, 0, 30, "Text"],
-Cell[4099, 124, 255, 9, 32, "Input"],
-Cell[4357, 135, 252, 9, 32, "Input"],
-Cell[4612, 146, 250, 9, 32, "Input"],
-Cell[4865, 157, 256, 9, 32, "Input"],
-Cell[5124, 168, 255, 9, 32, "Input"],
-Cell[5382, 179, 261, 9, 32, "Input"],
-Cell[5646, 190, 16, 0, 30, "Text"],
-Cell[5665, 192, 261, 9, 32, "Input"],
-Cell[5929, 203, 265, 9, 32, "Input"],
-Cell[6197, 214, 280, 9, 32, "Input"],
-Cell[6480, 225, 269, 9, 32, "Input"],
-Cell[6752, 236, 288, 9, 32, "Input"],
-Cell[7043, 247, 255, 9, 32, "Input"],
-Cell[7301, 258, 265, 9, 32, "Input"],
-Cell[7569, 269, 253, 9, 32, "Input"],
-Cell[7825, 280, 253, 9, 32, "Input"],
-Cell[8081, 291, 295, 9, 32, "Input"],
-Cell[8379, 302, 280, 9, 32, "Input"],
-Cell[8662, 313, 277, 9, 32, "Input"],
-Cell[8942, 324, 264, 9, 32, "Input"],
-Cell[9209, 335, 268, 9, 32, "Input"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[9514, 349, 116, 2, 67, "Section",
+Cell[3501, 97, 116, 2, 49, "Subsection",
  CellTags->"c:3"],
+Cell[3620, 101, 258, 9, 23, "TOCTitle"],
+Cell[3881, 112, 257, 9, 23, "TOCSubsubsection"],
+Cell[4141, 123, 252, 9, 23, "TOCSubsection"],
+Cell[4396, 134, 254, 9, 23, "TOCSection"],
+Cell[4653, 145, 251, 9, 23, "TOCSection"],
+Cell[4907, 156, 260, 9, 23, "TOCSection"],
+Cell[5170, 167, 262, 9, 23, "TOCSubsubsection"],
+Cell[5435, 178, 260, 9, 23, "TOCSubsubsection"],
+Cell[5698, 189, 266, 9, 23, "TOCSubsubsection"],
+Cell[5967, 200, 260, 9, 23, "TOCSection"],
+Cell[6230, 211, 272, 9, 23, "TOCSubsubsection"],
+Cell[6505, 222, 266, 9, 23, "TOCSection"],
+Cell[6774, 233, 273, 9, 23, "TOCSubsection"],
+Cell[7050, 244, 291, 9, 23, "TOCSubsubsection"],
+Cell[7344, 255, 280, 9, 23, "TOCSubsubsection"],
+Cell[7627, 266, 299, 9, 23, "TOCSubsubsection"],
+Cell[7929, 277, 266, 9, 23, "TOCSubsubsection"],
+Cell[8198, 288, 272, 9, 23, "TOCSubsection"],
+Cell[8473, 299, 263, 9, 23, "TOCSubsubsection"],
+Cell[8739, 310, 263, 9, 23, "TOCSubsubsection"],
+Cell[9005, 321, 305, 9, 23, "TOCSubsubsection"],
+Cell[9313, 332, 291, 9, 23, "TOCSubsubsection"],
+Cell[9607, 343, 288, 9, 23, "TOCSubsubsection"],
+Cell[9898, 354, 272, 9, 23, "TOCSubsection"],
+Cell[10173, 365, 279, 9, 23, "TOCSubsubsection"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[9655, 355, 179, 3, 32, "Input"],
+Cell[10489, 379, 116, 2, 70, "Section",
+ CellTags->"c:4"],
 Cell[CellGroupData[{
-Cell[9859, 362, 176, 2, 23, "Print"],
-Cell[10038, 366, 908, 22, 23, "Print"],
-Cell[10949, 390, 464, 10, 23, "Print"],
-Cell[11416, 402, 149, 2, 23, "Print"],
-Cell[11568, 406, 175, 2, 23, "Print"],
-Cell[11746, 410, 928, 21, 23, "Print"],
-Cell[12677, 433, 216, 3, 43, "Print"],
-Cell[12896, 438, 174, 2, 23, "Print"],
-Cell[13073, 442, 928, 21, 23, "Print"],
-Cell[14004, 465, 213, 3, 23, "Print"]
+Cell[10630, 385, 239, 4, 64, "Input"],
+Cell[CellGroupData[{
+Cell[10894, 393, 280, 4, 23, "Print"],
+Cell[11177, 399, 1014, 24, 23, "Print"],
+Cell[12194, 425, 594, 13, 23, "Print"],
+Cell[12791, 440, 255, 4, 23, "Print"],
+Cell[13049, 446, 280, 4, 23, "Print"],
+Cell[13332, 452, 1032, 23, 23, "Print"],
+Cell[14367, 477, 322, 5, 43, "Print"],
+Cell[14692, 484, 282, 4, 23, "Print"],
+Cell[14977, 490, 1034, 23, 23, "Print"],
+Cell[16014, 515, 320, 5, 43, "Print"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14278, 475, 221, 4, 67, "Section",
+Cell[16395, 527, 221, 4, 70, "Section",
+ CellTags->"c:5"],
+Cell[CellGroupData[{
+Cell[16641, 535, 564, 12, 31, "Input"],
+Cell[17208, 549, 10444, 261, 165, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27689, 815, 152, 2, 31, "Input"],
+Cell[27844, 819, 10163, 232, 483, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38044, 1056, 146, 2, 31, "Input"],
+Cell[38193, 1060, 2735, 56, 189, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40965, 1121, 149, 2, 31, "Input"],
+Cell[41117, 1125, 5262, 112, 119, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46428, 1243, 269, 4, 70, "Section",
+ CellTags->"c:6"],
+Cell[CellGroupData[{
+Cell[46722, 1251, 123, 2, 39, "Subsubsection",
+ CellTags->"c:7"],
+Cell[CellGroupData[{
+Cell[46870, 1257, 918, 17, 132, "Input"],
+Cell[47791, 1276, 11331, 279, 187, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59171, 1561, 124, 2, 39, "Subsubsection",
  CellTags->"c:8"],
 Cell[CellGroupData[{
-Cell[14524, 483, 564, 12, 32, "Input"],
-Cell[15091, 497, 9390, 234, 173, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[24518, 736, 152, 2, 32, "Input"],
-Cell[24673, 740, 10140, 231, 518, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[34850, 976, 146, 2, 32, "Input"],
-Cell[34999, 980, 2713, 56, 201, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[37749, 1041, 149, 2, 32, "Input"],
-Cell[37901, 1045, 5247, 112, 123, "Output"]
+Cell[59320, 1567, 264, 6, 31, "Input"],
+Cell[59587, 1575, 2814, 62, 139, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[43197, 1163, 269, 4, 67, "Section",
+Cell[62450, 1643, 229, 4, 39, "Subsubsection",
  CellTags->"c:9"],
 Cell[CellGroupData[{
-Cell[43491, 1171, 124, 2, 37, "Subsubsection",
- CellTags->"c:10"],
-Cell[CellGroupData[{
-Cell[43640, 1177, 918, 17, 143, "Input"],
-Cell[44561, 1196, 11307, 279, 199, "Output"]
+Cell[62704, 1651, 468, 10, 31, "Input"],
+Cell[63175, 1663, 10391, 257, 187, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[55917, 1481, 125, 2, 37, "Subsubsection",
+Cell[73627, 1927, 172, 3, 70, "Section",
+ CellTags->"c:10"],
+Cell[73802, 1932, 219, 5, 31, "Input"],
+Cell[CellGroupData[{
+Cell[74046, 1941, 232, 4, 39, "Subsubsection",
  CellTags->"c:11"],
 Cell[CellGroupData[{
-Cell[56067, 1487, 264, 6, 32, "Input"],
-Cell[56334, 1495, 2721, 61, 147, "Output"]
+Cell[74303, 1949, 574, 10, 31, "Input"],
+Cell[74880, 1961, 470, 8, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75387, 1974, 357, 7, 31, "Input"],
+Cell[75747, 1983, 308, 6, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76092, 1994, 230, 5, 31, "Input"],
+Cell[76325, 2001, 279, 5, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76641, 2011, 567, 11, 31, "Input"],
+Cell[77211, 2024, 3564, 81, 283, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[59104, 1562, 230, 4, 37, "Subsubsection",
+Cell[80836, 2112, 183, 3, 70, "Section",
  CellTags->"c:12"],
 Cell[CellGroupData[{
-Cell[59359, 1570, 439, 9, 32, "Input"],
-Cell[59801, 1581, 10323, 256, 199, "Output"]
-}, Open  ]]
-}, Open  ]]
+Cell[81044, 2119, 266, 4, 49, "Subsection",
+ CellTags->"c:13"],
+Cell[CellGroupData[{
+Cell[81335, 2127, 401, 6, 39, "Subsubsection",
+ CellTags->"c:14"],
+Cell[81739, 2135, 2345, 38, 212, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70185, 1844, 172, 3, 67, "Section",
+Cell[84121, 2178, 193, 3, 39, "Subsubsection",
  CellTags->"c:15"],
-Cell[70360, 1849, 219, 5, 32, "Input"],
 Cell[CellGroupData[{
-Cell[70604, 1858, 232, 4, 37, "Subsubsection",
+Cell[84339, 2185, 958, 19, 31, "Input"],
+Cell[85300, 2206, 1694, 34, 132, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87043, 2246, 165, 2, 39, "Subsubsection",
  CellTags->"c:16"],
-Cell[CellGroupData[{
-Cell[70861, 1866, 574, 10, 32, "Input"],
-Cell[71438, 1878, 446, 8, 32, "Output"]
+Cell[87211, 2250, 736, 13, 31, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[71921, 1891, 357, 7, 32, "Input"],
-Cell[72281, 1900, 284, 6, 32, "Output"]
-}, Open  ]],
+Cell[87984, 2268, 179, 3, 39, "Subsubsection",
+ CellTags->"c:17"],
 Cell[CellGroupData[{
-Cell[72602, 1911, 230, 5, 32, "Input"],
-Cell[72835, 1918, 255, 5, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[73127, 1928, 567, 11, 32, "Input"],
-Cell[73697, 1941, 3542, 81, 303, "Output"]
+Cell[88188, 2275, 602, 10, 31, "Input"],
+Cell[88793, 2287, 5560, 133, 117, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[77300, 2029, 183, 3, 67, "Section",
+Cell[94414, 2427, 263, 4, 49, "Subsection",
+ CellTags->"c:18"],
+Cell[CellGroupData[{
+Cell[94702, 2435, 127, 2, 39, "Subsubsection",
  CellTags->"c:19"],
 Cell[CellGroupData[{
-Cell[77508, 2036, 266, 4, 47, "Subsection",
+Cell[94854, 2441, 506, 9, 31, "Input"],
+Cell[95363, 2452, 442, 7, 31, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95854, 2465, 124, 2, 39, "Subsubsection",
  CellTags->"c:20"],
 Cell[CellGroupData[{
-Cell[77799, 2044, 401, 6, 37, "Subsubsection",
- CellTags->"c:21"],
-Cell[78203, 2052, 2345, 38, 231, "Input"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[80585, 2095, 193, 3, 37, "Subsubsection",
- CellTags->"c:22"],
-Cell[CellGroupData[{
-Cell[80803, 2102, 911, 18, 32, "Input"],
-Cell[81717, 2122, 1672, 34, 156, "Output"]
+Cell[96003, 2471, 729, 14, 31, "Input"],
+Cell[96735, 2487, 11462, 281, 187, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[83438, 2162, 165, 2, 37, "Subsubsection",
- CellTags->"c:23"],
-Cell[83606, 2166, 643, 12, 32, "Input"]
+Cell[108246, 2774, 371, 6, 39, "Subsubsection",
+ CellTags->"c:21"],
+Cell[108620, 2782, 333, 5, 30, "Text"],
+Cell[108956, 2789, 1169, 19, 332, "Input"],
+Cell[110128, 2810, 292, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[110445, 2818, 948, 16, 31, "Input"],
+Cell[111396, 2836, 2382, 52, 126, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84286, 2183, 179, 3, 37, "Subsubsection",
+Cell[113827, 2894, 207, 3, 39, "Subsubsection",
+ CellTags->"c:22"],
+Cell[114037, 2899, 696, 13, 132, "Input"],
+Cell[CellGroupData[{
+Cell[114758, 2916, 671, 12, 31, "Input"],
+Cell[115432, 2930, 2852, 64, 93, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[118333, 3000, 227, 3, 39, "Subsubsection",
+ CellTags->"c:23"],
+Cell[118563, 3005, 484, 10, 132, "Input"],
+Cell[CellGroupData[{
+Cell[119072, 3019, 296, 7, 31, "Input"],
+Cell[119371, 3028, 2806, 63, 93, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[122238, 3098, 186, 3, 49, "Subsection",
  CellTags->"c:24"],
 Cell[CellGroupData[{
-Cell[84490, 2190, 602, 10, 32, "Input"],
-Cell[85095, 2202, 5510, 132, 123, "Output"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[90666, 2341, 263, 4, 47, "Subsection",
+Cell[122449, 3105, 142, 2, 39, "Subsubsection",
  CellTags->"c:25"],
+Cell[122594, 3109, 183, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[90954, 2349, 127, 2, 37, "Subsubsection",
- CellTags->"c:26"],
-Cell[CellGroupData[{
-Cell[91106, 2355, 458, 9, 32, "Input"],
-Cell[91567, 2366, 705, 11, 407, "Output"]
-}, Open  ]]
+Cell[122802, 3116, 684, 14, 112, "Input"],
+Cell[123489, 3132, 7998, 189, 213, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[92321, 2383, 124, 2, 37, "Subsubsection",
- CellTags->"c:27"],
-Cell[CellGroupData[{
-Cell[92470, 2389, 729, 14, 55, "Input"],
-Cell[93202, 2405, 11416, 281, 199, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[104667, 2692, 371, 6, 37, "Subsubsection",
- CellTags->"c:28"],
-Cell[105041, 2700, 333, 5, 31, "Text"],
-Cell[105377, 2707, 1169, 19, 363, "Input"],
-Cell[106549, 2728, 292, 4, 31, "Text"],
-Cell[CellGroupData[{
-Cell[106866, 2736, 793, 14, 32, "Input"],
-Cell[107662, 2752, 2309, 51, 97, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[110020, 2809, 207, 3, 37, "Subsubsection",
- CellTags->"c:29"],
-Cell[110230, 2814, 696, 13, 143, "Input"],
-Cell[CellGroupData[{
-Cell[110951, 2831, 671, 12, 32, "Input"],
-Cell[111625, 2845, 2825, 63, 97, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[114499, 2914, 227, 3, 37, "Subsubsection",
- CellTags->"c:30"],
-Cell[114729, 2919, 484, 10, 143, "Input"],
-Cell[CellGroupData[{
-Cell[115238, 2933, 296, 7, 32, "Input"],
-Cell[115537, 2942, 2784, 63, 97, "Output"]
+Cell[131524, 3326, 738, 15, 112, "Input"],
+Cell[132265, 3343, 3199, 71, 93, "Output"]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[118382, 3012, 186, 3, 47, "Subsection",
- CellTags->"c:31"],
-Cell[CellGroupData[{
-Cell[118593, 3019, 142, 2, 37, "Subsubsection",
- CellTags->"c:32"],
-Cell[118738, 3023, 183, 3, 31, "Text"],
-Cell[CellGroupData[{
-Cell[118946, 3030, 637, 13, 121, "Input"],
-Cell[119586, 3045, 7976, 189, 227, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[127599, 3239, 693, 14, 121, "Input"],
-Cell[128295, 3255, 3175, 71, 97, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[131497, 3330, 118, 1, 37, "Subsubsection"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

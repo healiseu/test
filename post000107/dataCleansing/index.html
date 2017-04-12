@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  Untitled
+ </title>
+ <link href="HTMLFiles/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="font-size: Floor[90. Inherited]%;">
+
+<p class="Title">
+ OrientR3S3 - Filtering on SupplierPartCatalog
+</p>
+
+
+
+<p class="Chapter">
+ Data Cleansing
+</p>
+
+
+
+<p class="Section">
+ Initialization
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_1.gif" alt="index_1.gif" width="217" height="57" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_2.png" alt="index_2.png" width="196" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_3.png" alt="index_3.png" width="315" height="15" style="vertical-align:middle;" usemap="#map_3" />
+<map name="map_3">
+<area shape="rect" coords="168,14,315,0" href="https://www.linkedin.com/in/athanassios" />
+</map>
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_4.png" alt="index_4.png" width="162" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Set Variables
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_5.png" alt="index_5.png" width="588" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_6.png" alt="index_6.png" width="331" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_7.png" alt="index_7.png" width="590" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_8.png" alt="index_8.png" width="629" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Detect Error
+</p>
+
+
+
+<p class="Subsection">
+ Part Tuples
+</p>
+
+
+
+<p class="Subsubsection">
+ Get Part Item WHERE prtName=&lsquo;Acme Widget Washer&rsquo;
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_9.png" alt="index_9.png" width="487" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_10.png" alt="index_10.png" width="35" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Get Part Tuples with WHERE Condition
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_11.png" alt="index_11.png" width="598" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_12.png" alt="index_12.png" width="610" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Get Nexuses
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_13.png" alt="index_13.png" width="421" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_14.png" alt="index_14.png" width="95" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Draw Hypergraph
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_15.png" alt="index_15.png" width="810" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_16.gif" alt="index_16.gif" width="518" height="233" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Part Item Collections
+</p>
+
+
+
+<p class="Subsubsection">
+ Filtered with WHERE Condition prtName=&rsquo;Acme Widget Washer&rsquo;
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_17.png" alt="index_17.png" width="621" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_18.gif" alt="index_18.gif" width="355" height="38" style="vertical-align:middle" />
+</p>
+
+<p class="Chapter">
+ <span class="SectionInline">Correct Error</span>
+</p>
+
+
+
+<p class="Subsection">
+ Action1: Nexus Item 52:3 must be linked to Datum &ldquo;kg&rdquo; instead of Datum &ldquo;kb&rdquo; and <br />Action2: The old edge must be removed or update the endpoint of edge
+</p>
+
+
+
+<p class="Subsubsection">
+ Find Part Item WHERE prtUnit=&rsquo;kg&rsquo;
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_19.png" alt="index_19.png" width="337" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_20.png" alt="index_20.png" width="35" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_21.png" alt="index_21.png" width="252" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_22.png" alt="index_22.png" width="317" height="180" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Add Edge
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_23.png" alt="index_23.png" width="276" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_24.png" alt="index_24.png" width="816" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Find Part Item WHERE prtUnit=&rsquo;kb&rsquo;
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_25.png" alt="index_25.png" width="337" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_26.png" alt="index_26.png" width="35" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_27.png" alt="index_27.png" width="252" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_28.png" alt="index_28.png" width="317" height="180" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Remove Old Edge
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_29.png" alt="index_29.png" width="656" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_30.png" alt="index_30.png" width="266" height="52" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_31.png" alt="index_31.png" width="389" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Validate
+</p>
+
+
+
+<p class="Subsubsection">
+ Redraw Hypergraph
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_32.png" alt="index_32.png" width="598" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_33.png" alt="index_33.png" width="610" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_34.png" alt="index_34.png" width="810" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_35.gif" alt="index_35.gif" width="518" height="207" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Part Item Collections
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_36.png" alt="index_36.png" width="621" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_37.gif" alt="index_37.gif" width="355" height="38" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>

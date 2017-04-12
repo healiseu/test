@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  Untitled
+ </title>
+ <link href="HTMLFiles/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="font-size: Floor[90. Inherited]%;">
+
+<p class="Title">
+ R3DM/S3DM in OrientDB
+</p>
+
+
+
+<p class="Chapter">
+ Populate Item Collections and Value Type System
+</p>
+
+
+
+<p class="Section">
+ Initialization
+</p>
+
+
+
+<p class="Subsection">
+ Package
+</p>
+
+
+
+<p class="Subsubsection">
+ Load Package
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_1.png" alt="index_1.png" width="137" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_2.png" alt="index_2.png" width="175" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_3.png" alt="index_3.png" width="504" height="15" style="vertical-align:middle;" usemap="#map_3" />
+<map name="map_3">
+<area shape="rect" coords="196,14,238,0" href="http://healis.eu" />
+</map>
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_4.png" alt="index_4.png" width="618" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_5.png" alt="index_5.png" width="12" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_6.png" alt="index_6.png" width="203" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_7.png" alt="index_7.png" width="315" height="15" style="vertical-align:middle;" usemap="#map_7" />
+<map name="map_7">
+<area shape="rect" coords="168,14,315,0" href="https://www.linkedin.com/in/athanassios" />
+</map>
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_8.png" alt="index_8.png" width="434" height="34" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_9.png" alt="index_9.png" width="189" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_10.png" alt="index_10.png" width="315" height="15" style="vertical-align:middle;" usemap="#map_10" />
+<map name="map_10">
+<area shape="rect" coords="168,14,315,0" href="https://www.linkedin.com/in/athanassios" />
+</map>
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_11.png" alt="index_11.png" width="434" height="34" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_12.png" alt="index_12.png" width="231" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_13.png" alt="index_13.png" width="315" height="15" style="vertical-align:middle;" usemap="#map_13" />
+<map name="map_13">
+<area shape="rect" coords="168,14,315,0" href="https://www.linkedin.com/in/athanassios" />
+</map>
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_14.png" alt="index_14.png" width="434" height="34" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_15.png" alt="index_15.png" width="196" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_16.png" alt="index_16.png" width="315" height="15" style="vertical-align:middle;" usemap="#map_16" />
+<map name="map_16">
+<area shape="rect" coords="168,14,315,0" href="https://www.linkedin.com/in/athanassios" />
+</map>
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_17.png" alt="index_17.png" width="120" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_18.png" alt="index_18.png" width="191" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_19.gif" alt="index_19.gif" width="610" height="57" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Environment
+</p>
+
+
+
+<p class="Subsubsection">
+ Select Environment
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_20.png" alt="index_20.png" width="217" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Systems
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_21.png" alt="index_21.png" width="599" height="77" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_22.png" alt="index_22.png" width="194" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Entities
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_23.png" alt="index_23.png" width="473" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_24.png" alt="index_24.png" width="168" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_25.png" alt="index_25.png" width="526" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_26.png" alt="index_26.png" width="231" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_27.png" alt="index_27.png" width="498" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_28.png" alt="index_28.png" width="203" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_29.png" alt="index_29.png" width="519" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_30.png" alt="index_30.png" width="224" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Read Data Values in Memory
+</p>
+
+
+
+<p class="Subsection">
+ Get Dataset
+</p>
+
+
+
+<p class="Subsubsection">
+ Get Full Path and File Names
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_31.png" alt="index_31.png" width="452" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_32.png" alt="index_32.png" width="56" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_33.png" alt="index_33.png" width="214" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_34.png" alt="index_34.png" width="184" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_35.png" alt="index_35.png" width="267" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Get Columns for Each Table
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_36.png" alt="index_36.png" width="525" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_37.gif" alt="index_37.gif" width="216" height="102" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_38.png" alt="index_38.png" width="618" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_39.gif" alt="index_39.gif" width="188" height="102" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_40.png" alt="index_40.png" width="184" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_41.png" alt="index_41.png" width="911" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Read Data
+</p>
+
+
+
+<p class="Subsubsection">
+ Get Headers for Each TSV File
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_42.png" alt="index_42.png" width="470" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_43.png" alt="index_43.png" width="932" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Get Body for Each TSV File
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_44.png" alt="index_44.png" width="560" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>Acme Widget Suppliers</span></td>
+  <td style='text-align: left;'><span>1 Grub St., Potemkin Village, IL 61801</span></td>
+  <td style='text-align: left;'><span>ILLINOIS</span></td>
+  <td style='text-align: left;'><span>USA</span></td>
+  <td style='text-align: left;'><span>10</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1082</span></td>
+  <td style='text-align: left;'><span>Big Red Tool and Die</span></td>
+  <td style='text-align: left;'><span>4 My Way, Bermuda Shorts, OR 90305</span></td>
+  <td style='text-align: left;'><span>OREGON</span></td>
+  <td style='text-align: left;'><span>USA</span></td>
+  <td style='text-align: left;'><span>20</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1083</span></td>
+  <td style='text-align: left;'><span>Perfunctory Parts</span></td>
+  <td style='text-align: left;'><span>99 Short Pier, Terra Del Fuego, TX 41299</span></td>
+  <td style='text-align: left;'><span>MADRID</span></td>
+  <td style='text-align: left;'><span>SPAIN</span></td>
+  <td style='text-align: left;'><span>30</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1084</span></td>
+  <td style='text-align: left;'><span>Alien Aircaft Inc.</span></td>
+  <td style='text-align: left;'><span>2 Groom Lake, Rachel, NV 51902</span></td>
+  <td style='text-align: left;'><span>NOTTINGHAM</span></td>
+  <td style='text-align: left;'><span>UK</span></td>
+  <td style='text-align: left;'><span>10</span></td>
+ </tr>
+</table>
+
+<p class="Input">
+ <img src="HTMLFiles/index_45.png" alt="index_45.png" width="561" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>991</span></td>
+  <td style='text-align: left;'><span>Left Handed Bacon Stretcher Cover</span></td>
+  <td style='text-align: left;'><span>Red</span></td>
+  <td style='text-align: left;'><span>15.5</span></td>
+  <td style='text-align: left;'><span>lb</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>992</span></td>
+  <td style='text-align: left;'><span>Smoke Shifter End</span></td>
+  <td style='text-align: left;'><span>Black</span></td>
+  <td style='text-align: left;'><span>3.75</span></td>
+  <td style='text-align: left;'><span>lb</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>993</span></td>
+  <td style='text-align: left;'><span>Acme Widget Washer</span></td>
+  <td style='text-align: left;'><span>Red</span></td>
+  <td style='text-align: left;'><span>142.88</span></td>
+  <td style='text-align: left;'><span>kg</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>994</span></td>
+  <td style='text-align: left;'><span>Acme Widget Washer</span></td>
+  <td style='text-align: left;'><span>Silver</span></td>
+  <td style='text-align: left;'><span>142.88</span></td>
+  <td style='text-align: left;'><span>kb</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>995</span></td>
+  <td style='text-align: left;'><span>I Brake for Crop Circles Sticker</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>996</span></td>
+  <td style='text-align: left;'><span>Anti-Gravity Turbine Generator</span></td>
+  <td style='text-align: left;'><span>Cyan</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>997</span></td>
+  <td style='text-align: left;'><span>Anti-Gravity Turbine Generator</span></td>
+  <td style='text-align: left;'><span>Magenta</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>Fire Hydrant Cap</span></td>
+  <td style='text-align: left;'><span>Red</span></td>
+  <td style='text-align: left;'><span>7.2</span></td>
+  <td style='text-align: left;'><span>lb</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>999</span></td>
+  <td style='text-align: left;'><span>7 Segment Display</span></td>
+  <td style='text-align: left;'><span>Green</span></td>
+  <td style='text-align: left;'><span>2.1</span></td>
+  <td style='text-align: left;'><span>gr</span></td>
+ </tr>
+</table>
+
+<p class="Input">
+ <img src="HTMLFiles/index_46.png" alt="index_46.png" width="560" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>991</span></td>
+  <td style='text-align: left;'><span>36.1</span></td>
+  <td style='text-align: left;'><span>300</span></td>
+  <td style='text-align: left;'><span>20/12/2014</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>992</span></td>
+  <td style='text-align: left;'><span>42.3</span></td>
+  <td style='text-align: left;'><span>400</span></td>
+  <td style='text-align: left;'><span>20/12/2014</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>993</span></td>
+  <td style='text-align: left;'><span>15.3</span></td>
+  <td style='text-align: left;'><span>200</span></td>
+  <td style='text-align: left;'><span>03/03/2014</span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>994</span></td>
+  <td style='text-align: left;'><span>20.5</span></td>
+  <td style='text-align: left;'><span>100</span></td>
+  <td style='text-align: left;'><span>03/03/2014</span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>995</span></td>
+  <td style='text-align: left;'><span>20.5</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>996</span></td>
+  <td style='text-align: left;'><span>124.23</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>997</span></td>
+  <td style='text-align: left;'><span>124.23</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>11.7</span></td>
+  <td style='text-align: left;'><span>400</span></td>
+  <td style='text-align: left;'><span>10/09/2014</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>999</span></td>
+  <td style='text-align: left;'><span>75.2</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1082</span></td>
+  <td style='text-align: left;'><span>991</span></td>
+  <td style='text-align: left;'><span>16.5</span></td>
+  <td style='text-align: left;'><span>200</span></td>
+  <td style='text-align: left;'><span>10/09/2014</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1082</span></td>
+  <td style='text-align: left;'><span>997</span></td>
+  <td style='text-align: left;'><span>0.55</span></td>
+  <td style='text-align: left;'><span>100</span></td>
+  <td style='text-align: left;'><span>10/09/2014</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1082</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>7.95</span></td>
+  <td style='text-align: left;'><span>200</span></td>
+  <td style='text-align: left;'><span>03/03/2014</span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1083</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>12.5</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1083</span></td>
+  <td style='text-align: left;'><span>999</span></td>
+  <td style='text-align: left;'><span>1</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1084</span></td>
+  <td style='text-align: left;'><span>994</span></td>
+  <td style='text-align: left;'><span>57.3</span></td>
+  <td style='text-align: left;'><span>100</span></td>
+  <td style='text-align: left;'><span>20/12/2014</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1084</span></td>
+  <td style='text-align: left;'><span>995</span></td>
+  <td style='text-align: left;'><span>22.2</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1084</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>48.6</span></td>
+  <td style='text-align: left;'><span>200</span></td>
+  <td style='text-align: left;'><span>20/12/2014</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+</table>
+
+<p class="Section">
+ Digestion of suppliers.tsv
+</p>
+
+
+
+<p class="Subsection">
+ Get Mapping
+</p>
+
+
+
+<p class="Subsubsection">
+ Many-To-One: From any field of a Dataset onto the Attributes of Supplier Entity 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_47.png" alt="index_47.png" width="528" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_48.png" alt="index_48.png" width="752" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_49.png" alt="index_49.png" width="481" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_50.gif" alt="index_50.gif" width="720" height="451" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Each Column of a Table is mapped onto only one Attribute of an Entity
+</p>
+
+
+
+<p class="Text">
+ <span style='font-weight: bold;'>Filter Mapping Rules with those columns of a Dataset Table</span>
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_51.png" alt="index_51.png" width="342" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_52.png" alt="index_52.png" width="640" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_53.png" alt="index_53.png" width="502" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_54.gif" alt="index_54.gif" width="720" height="451" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Between the NAMES of the Columns and the VALUE TYPES of the mapped Attributes
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_55.png" alt="index_55.png" width="714" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_56.png" alt="index_56.png" width="559" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_57.png" alt="index_57.png" width="258" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_58.png" alt="index_58.png" width="195" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Between the NAMES of the Columns and the NAMES of the mapped Attributes
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_59.png" alt="index_59.png" width="665" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_60.png" alt="index_60.png" width="1066" height="36" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_61.png" alt="index_61.png" width="243" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_62.png" alt="index_62.png" width="870" height="36" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Add References
+</p>
+
+
+
+<p class="Subsubsection">
+ Add Values
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_63.png" alt="index_63.png" width="686" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#47:0</span></td>
+  <td style='text-align: left;'><span>#46:0</span></td>
+  <td style='text-align: left;'><span>#47:1</span></td>
+  <td style='text-align: left;'><span>#47:2</span></td>
+  <td style='text-align: left;'><span>#44:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:2</span></td>
+  <td style='text-align: left;'><span>#47:3</span></td>
+  <td style='text-align: left;'><span>#46:1</span></td>
+  <td style='text-align: left;'><span>#47:4</span></td>
+  <td style='text-align: left;'><span>#47:2</span></td>
+  <td style='text-align: left;'><span>#44:3</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:4</span></td>
+  <td style='text-align: left;'><span>#47:5</span></td>
+  <td style='text-align: left;'><span>#46:2</span></td>
+  <td style='text-align: left;'><span>#47:6</span></td>
+  <td style='text-align: left;'><span>#47:7</span></td>
+  <td style='text-align: left;'><span>#44:5</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:6</span></td>
+  <td style='text-align: left;'><span>#47:8</span></td>
+  <td style='text-align: left;'><span>#46:3</span></td>
+  <td style='text-align: left;'><span>#47:9</span></td>
+  <td style='text-align: left;'><span>#47:10</span></td>
+  <td style='text-align: left;'><span>#44:1</span></td>
+ </tr>
+</table>
+
+<p class="Subsubsection">
+ Add Attribute Items
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_64.png" alt="index_64.png" width="543" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#55:0</span></td>
+  <td style='text-align: left;'><span>#56:0</span></td>
+  <td style='text-align: left;'><span>#57:0</span></td>
+  <td style='text-align: left;'><span>#58:0</span></td>
+  <td style='text-align: left;'><span>#59:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:1</span></td>
+  <td style='text-align: left;'><span>#55:1</span></td>
+  <td style='text-align: left;'><span>#56:1</span></td>
+  <td style='text-align: left;'><span>#57:1</span></td>
+  <td style='text-align: left;'><span>#58:0</span></td>
+  <td style='text-align: left;'><span>#59:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:2</span></td>
+  <td style='text-align: left;'><span>#55:2</span></td>
+  <td style='text-align: left;'><span>#56:2</span></td>
+  <td style='text-align: left;'><span>#57:2</span></td>
+  <td style='text-align: left;'><span>#58:1</span></td>
+  <td style='text-align: left;'><span>#59:2</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:3</span></td>
+  <td style='text-align: left;'><span>#55:3</span></td>
+  <td style='text-align: left;'><span>#56:3</span></td>
+  <td style='text-align: left;'><span>#57:3</span></td>
+  <td style='text-align: left;'><span>#58:2</span></td>
+  <td style='text-align: left;'><span>#59:0</span></td>
+ </tr>
+</table>
+
+<p class="Subsubsection">
+ Add Entity Items
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_65.png" alt="index_65.png" width="471" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_66.png" alt="index_66.png" width="187" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Add Associations
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_67.png" alt="index_67.png" width="433" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_68.png" alt="index_68.png" width="845" height="454" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Digestion of parts.tsv
+</p>
+
+
+
+<p class="Subsection">
+ Get Mapping
+</p>
+
+
+
+<p class="Subsubsection">
+ Many-To-One: From any field of a Dataset onto the Attributes of Part Entity 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_69.png" alt="index_69.png" width="500" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_70.png" alt="index_70.png" width="682" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_71.png" alt="index_71.png" width="453" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_72.gif" alt="index_72.gif" width="720" height="451" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Each Column of a Table is mapped onto only one Attribute of an Entity
+</p>
+
+
+
+<p class="Text">
+ <span style='font-weight: bold;'>Filter Mapping Rules with those columns of the Dataset Table</span>
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_73.png" alt="index_73.png" width="316" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_74.png" alt="index_74.png" width="563" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_75.png" alt="index_75.png" width="475" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_76.gif" alt="index_76.gif" width="720" height="451" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Between the NAMES of the Columns and the VALUE TYPES of the mapped Attributes
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_77.png" alt="index_77.png" width="687" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_78.png" alt="index_78.png" width="440" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_79.png" alt="index_79.png" width="259" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_80.png" alt="index_80.png" width="163" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Between the NAMES of the Columns and the NAMES of the mapped Attributes
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_81.png" alt="index_81.png" width="638" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_82.png" alt="index_82.png" width="954" height="36" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_83.png" alt="index_83.png" width="244" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_84.png" alt="index_84.png" width="772" height="36" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Add References
+</p>
+
+
+
+<p class="Subsubsection">
+ Add Values
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_85.png" alt="index_85.png" width="687" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:7</span></td>
+  <td style='text-align: left;'><span>#47:11</span></td>
+  <td style='text-align: left;'><span>#47:12</span></td>
+  <td style='text-align: left;'><span>#45:0</span></td>
+  <td style='text-align: left;'><span>#47:13</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:8</span></td>
+  <td style='text-align: left;'><span>#47:14</span></td>
+  <td style='text-align: left;'><span>#47:15</span></td>
+  <td style='text-align: left;'><span>#45:1</span></td>
+  <td style='text-align: left;'><span>#47:13</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:9</span></td>
+  <td style='text-align: left;'><span>#47:16</span></td>
+  <td style='text-align: left;'><span>#47:12</span></td>
+  <td style='text-align: left;'><span>#45:2</span></td>
+  <td style='text-align: left;'><span>#47:17</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:10</span></td>
+  <td style='text-align: left;'><span>#47:16</span></td>
+  <td style='text-align: left;'><span>#47:18</span></td>
+  <td style='text-align: left;'><span>#45:2</span></td>
+  <td style='text-align: left;'><span>#47:19</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:11</span></td>
+  <td style='text-align: left;'><span>#47:20</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:12</span></td>
+  <td style='text-align: left;'><span>#47:21</span></td>
+  <td style='text-align: left;'><span>#47:22</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:13</span></td>
+  <td style='text-align: left;'><span>#47:21</span></td>
+  <td style='text-align: left;'><span>#47:23</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:14</span></td>
+  <td style='text-align: left;'><span>#47:24</span></td>
+  <td style='text-align: left;'><span>#47:12</span></td>
+  <td style='text-align: left;'><span>#45:3</span></td>
+  <td style='text-align: left;'><span>#47:13</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:15</span></td>
+  <td style='text-align: left;'><span>#47:25</span></td>
+  <td style='text-align: left;'><span>#47:26</span></td>
+  <td style='text-align: left;'><span>#45:4</span></td>
+  <td style='text-align: left;'><span>#47:27</span></td>
+ </tr>
+</table>
+
+<p class="Subsubsection">
+ Add Attribute Items
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_86.png" alt="index_86.png" width="543" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:0</span></td>
+  <td style='text-align: left;'><span>#61:0</span></td>
+  <td style='text-align: left;'><span>#62:0</span></td>
+  <td style='text-align: left;'><span>#63:0</span></td>
+  <td style='text-align: left;'><span>#64:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:1</span></td>
+  <td style='text-align: left;'><span>#61:1</span></td>
+  <td style='text-align: left;'><span>#62:1</span></td>
+  <td style='text-align: left;'><span>#63:1</span></td>
+  <td style='text-align: left;'><span>#64:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:2</span></td>
+  <td style='text-align: left;'><span>#61:2</span></td>
+  <td style='text-align: left;'><span>#62:0</span></td>
+  <td style='text-align: left;'><span>#63:2</span></td>
+  <td style='text-align: left;'><span>#64:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:3</span></td>
+  <td style='text-align: left;'><span>#61:2</span></td>
+  <td style='text-align: left;'><span>#62:2</span></td>
+  <td style='text-align: left;'><span>#63:2</span></td>
+  <td style='text-align: left;'><span>#64:2</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:4</span></td>
+  <td style='text-align: left;'><span>#61:3</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:5</span></td>
+  <td style='text-align: left;'><span>#61:4</span></td>
+  <td style='text-align: left;'><span>#62:3</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:6</span></td>
+  <td style='text-align: left;'><span>#61:4</span></td>
+  <td style='text-align: left;'><span>#62:4</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:7</span></td>
+  <td style='text-align: left;'><span>#61:5</span></td>
+  <td style='text-align: left;'><span>#62:0</span></td>
+  <td style='text-align: left;'><span>#63:3</span></td>
+  <td style='text-align: left;'><span>#64:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:8</span></td>
+  <td style='text-align: left;'><span>#61:6</span></td>
+  <td style='text-align: left;'><span>#62:5</span></td>
+  <td style='text-align: left;'><span>#63:4</span></td>
+  <td style='text-align: left;'><span>#64:3</span></td>
+ </tr>
+</table>
+
+<p class="Subsubsection">
+ Add Entity Items
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_87.png" alt="index_87.png" width="444" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_88.png" alt="index_88.png" width="417" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Add Associations
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_89.png" alt="index_89.png" width="433" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_90.png" alt="index_90.png" width="1171" height="758" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_91.png" alt="index_91.png" width="311" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Digestion of catalog.tsv
+</p>
+
+
+
+<p class="Subsection">
+ Get Mapping
+</p>
+
+
+
+<p class="Subsubsection">
+ Many-To-One: From any field of a Dataset onto the Attributes of Catalog Entity 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_92.png" alt="index_92.png" width="521" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_93.png" alt="index_93.png" width="864" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_94.png" alt="index_94.png" width="474" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_95.gif" alt="index_95.gif" width="720" height="451" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Each Column of a Table is mapped onto only one Attribute of an Entity
+</p>
+
+
+
+<p class="Text">
+ <span style='font-weight: bold;'>Filter Mapping Rules with those columns of the Dataset Table</span>
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_96.png" alt="index_96.png" width="335" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_97.png" alt="index_97.png" width="633" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_98.png" alt="index_98.png" width="495" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_99.gif" alt="index_99.gif" width="720" height="451" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Between the NAMES of the Columns and the VALUE TYPES of the mapped Attributes
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_100.png" alt="index_100.png" width="707" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_101.png" alt="index_101.png" width="566" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_102.png" alt="index_102.png" width="258" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_103.png" alt="index_103.png" width="188" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ One-To-One: Between the NAMES of the Columns and the NAMES of the mapped Attributes
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_104.png" alt="index_104.png" width="658" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_105.png" alt="index_105.png" width="1023" height="36" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_106.png" alt="index_106.png" width="243" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_107.png" alt="index_107.png" width="828" height="36" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Add References
+</p>
+
+
+
+<p class="Subsubsection">
+ Add Values
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_108.png" alt="index_108.png" width="686" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:7</span></td>
+  <td style='text-align: left;'><span>#45:5</span></td>
+  <td style='text-align: left;'><span>#44:16</span></td>
+  <td style='text-align: left;'><span>#49:0</span></td>
+  <td style='text-align: left;'><span>#47:28</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:8</span></td>
+  <td style='text-align: left;'><span>#45:6</span></td>
+  <td style='text-align: left;'><span>#44:17</span></td>
+  <td style='text-align: left;'><span>#49:0</span></td>
+  <td style='text-align: left;'><span>#47:28</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:9</span></td>
+  <td style='text-align: left;'><span>#45:7</span></td>
+  <td style='text-align: left;'><span>#44:18</span></td>
+  <td style='text-align: left;'><span>#49:1</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:10</span></td>
+  <td style='text-align: left;'><span>#45:8</span></td>
+  <td style='text-align: left;'><span>#44:19</span></td>
+  <td style='text-align: left;'><span>#49:1</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:11</span></td>
+  <td style='text-align: left;'><span>#45:8</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:12</span></td>
+  <td style='text-align: left;'><span>#45:9</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:13</span></td>
+  <td style='text-align: left;'><span>#45:9</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:14</span></td>
+  <td style='text-align: left;'><span>#45:10</span></td>
+  <td style='text-align: left;'><span>#44:17</span></td>
+  <td style='text-align: left;'><span>#49:2</span></td>
+  <td style='text-align: left;'><span>#47:28</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:0</span></td>
+  <td style='text-align: left;'><span>#44:15</span></td>
+  <td style='text-align: left;'><span>#45:11</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:2</span></td>
+  <td style='text-align: left;'><span>#44:7</span></td>
+  <td style='text-align: left;'><span>#45:12</span></td>
+  <td style='text-align: left;'><span>#44:18</span></td>
+  <td style='text-align: left;'><span>#49:2</span></td>
+  <td style='text-align: left;'><span>#47:28</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:2</span></td>
+  <td style='text-align: left;'><span>#44:13</span></td>
+  <td style='text-align: left;'><span>#45:13</span></td>
+  <td style='text-align: left;'><span>#44:19</span></td>
+  <td style='text-align: left;'><span>#49:2</span></td>
+  <td style='text-align: left;'><span>#47:28</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:2</span></td>
+  <td style='text-align: left;'><span>#44:14</span></td>
+  <td style='text-align: left;'><span>#45:14</span></td>
+  <td style='text-align: left;'><span>#44:18</span></td>
+  <td style='text-align: left;'><span>#49:1</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:4</span></td>
+  <td style='text-align: left;'><span>#44:14</span></td>
+  <td style='text-align: left;'><span>#45:15</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:4</span></td>
+  <td style='text-align: left;'><span>#44:15</span></td>
+  <td style='text-align: left;'><span>#45:16</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:6</span></td>
+  <td style='text-align: left;'><span>#44:10</span></td>
+  <td style='text-align: left;'><span>#45:17</span></td>
+  <td style='text-align: left;'><span>#44:19</span></td>
+  <td style='text-align: left;'><span>#49:0</span></td>
+  <td style='text-align: left;'><span>#47:28</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:6</span></td>
+  <td style='text-align: left;'><span>#44:11</span></td>
+  <td style='text-align: left;'><span>#45:18</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#47:29</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#44:6</span></td>
+  <td style='text-align: left;'><span>#44:14</span></td>
+  <td style='text-align: left;'><span>#45:19</span></td>
+  <td style='text-align: left;'><span>#44:18</span></td>
+  <td style='text-align: left;'><span>#49:0</span></td>
+  <td style='text-align: left;'><span>#47:28</span></td>
+ </tr>
+</table>
+
+<p class="Subsubsection">
+ Add Attribute Items
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_109.png" alt="index_109.png" width="543" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:0</span></td>
+  <td style='text-align: left;'><span>#65:0</span></td>
+  <td style='text-align: left;'><span>#66:0</span></td>
+  <td style='text-align: left;'><span>#67:0</span></td>
+  <td style='text-align: left;'><span>#68:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:1</span></td>
+  <td style='text-align: left;'><span>#65:1</span></td>
+  <td style='text-align: left;'><span>#66:1</span></td>
+  <td style='text-align: left;'><span>#67:0</span></td>
+  <td style='text-align: left;'><span>#68:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:2</span></td>
+  <td style='text-align: left;'><span>#65:2</span></td>
+  <td style='text-align: left;'><span>#66:2</span></td>
+  <td style='text-align: left;'><span>#67:1</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:3</span></td>
+  <td style='text-align: left;'><span>#65:3</span></td>
+  <td style='text-align: left;'><span>#66:3</span></td>
+  <td style='text-align: left;'><span>#67:1</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:4</span></td>
+  <td style='text-align: left;'><span>#65:3</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:5</span></td>
+  <td style='text-align: left;'><span>#65:4</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:6</span></td>
+  <td style='text-align: left;'><span>#65:4</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:7</span></td>
+  <td style='text-align: left;'><span>#65:5</span></td>
+  <td style='text-align: left;'><span>#66:1</span></td>
+  <td style='text-align: left;'><span>#67:2</span></td>
+  <td style='text-align: left;'><span>#68:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#60:8</span></td>
+  <td style='text-align: left;'><span>#65:6</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:1</span></td>
+  <td style='text-align: left;'><span>#60:0</span></td>
+  <td style='text-align: left;'><span>#65:7</span></td>
+  <td style='text-align: left;'><span>#66:2</span></td>
+  <td style='text-align: left;'><span>#67:2</span></td>
+  <td style='text-align: left;'><span>#68:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:1</span></td>
+  <td style='text-align: left;'><span>#60:6</span></td>
+  <td style='text-align: left;'><span>#65:8</span></td>
+  <td style='text-align: left;'><span>#66:3</span></td>
+  <td style='text-align: left;'><span>#67:2</span></td>
+  <td style='text-align: left;'><span>#68:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:1</span></td>
+  <td style='text-align: left;'><span>#60:7</span></td>
+  <td style='text-align: left;'><span>#65:9</span></td>
+  <td style='text-align: left;'><span>#66:2</span></td>
+  <td style='text-align: left;'><span>#67:1</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:2</span></td>
+  <td style='text-align: left;'><span>#60:7</span></td>
+  <td style='text-align: left;'><span>#65:10</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:2</span></td>
+  <td style='text-align: left;'><span>#60:8</span></td>
+  <td style='text-align: left;'><span>#65:11</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:3</span></td>
+  <td style='text-align: left;'><span>#60:3</span></td>
+  <td style='text-align: left;'><span>#65:12</span></td>
+  <td style='text-align: left;'><span>#66:3</span></td>
+  <td style='text-align: left;'><span>#67:0</span></td>
+  <td style='text-align: left;'><span>#68:0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:3</span></td>
+  <td style='text-align: left;'><span>#60:4</span></td>
+  <td style='text-align: left;'><span>#65:13</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>Missing[]</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:3</span></td>
+  <td style='text-align: left;'><span>#60:7</span></td>
+  <td style='text-align: left;'><span>#65:14</span></td>
+  <td style='text-align: left;'><span>#66:2</span></td>
+  <td style='text-align: left;'><span>#67:0</span></td>
+  <td style='text-align: left;'><span>#68:0</span></td>
+ </tr>
+</table>
+
+<p class="Subsubsection">
+ Add Entity Items
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_110.png" alt="index_110.png" width="464" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_111.png" alt="index_111.png" width="834" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Add Associations
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_112.png" alt="index_112.png" width="433" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_113.png" alt="index_113.png" width="1178" height="1746" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_114.png" alt="index_114.png" width="311" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ End
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_115.png" alt="index_115.png" width="120" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_116.png" alt="index_116.png" width="191" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_117.png" alt="index_117.png" width="228" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_118.png" alt="index_118.png" width="67" height="24" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_119.png" alt="index_119.png" width="539" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_120.png" alt="index_120.png" width="253" height="22" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  Untitled
+ </title>
+ <link href="HTMLFiles/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Title">
+ OrientR3S3 - Filtering on SupplierPartCatalog
+</p>
+
+
+
+<p class="Chapter">
+ Get the Supplier with the Minimum Catalog Price for a Part
+</p>
+
+
+
+<p class="Section">
+ Initialize
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_1.gif" alt="index_1.gif" width="246" height="37" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_2.png" alt="index_2.png" width="196" height="15" style="vertical-align:middle" />
+</p>
+
+<p class="Print">
+ <img src="HTMLFiles/index_3.png" alt="index_3.png" width="315" height="15" style="vertical-align:middle;" usemap="#map_3" />
+<map name="map_3">
+<area shape="rect" coords="168,15,315,0" href="https://www.linkedin.com/in/athanassios" />
+</map>
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_4.png" alt="index_4.png" width="665" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Find References for Entities, Attributes and Items
+</p>
+
+
+
+<p class="Subsection">
+ Get Model
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_5.png" alt="index_5.png" width="538" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_6.png" alt="index_6.png" width="192" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Get Entities
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_7.png" alt="index_7.png" width="511" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_8.png" alt="index_8.png" width="794" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_9.png" alt="index_9.png" width="507" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_10.png" alt="index_10.png" width="162" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Find Part Item that has prtID=998
+</p>
+
+
+
+<p class="Subsubsection">
+ From the Model Find prtID Collection
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_11.png" alt="index_11.png" width="460" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_12.png" alt="index_12.png" width="48" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ From prtID Collection Find Datum with the Value 998
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_13.png" alt="index_13.png" width="367" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_14.png" alt="index_14.png" width="40" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Solution 1
+</p>
+
+
+
+<p class="Subsection">
+ Filter and SortBy Catalog Tuples 
+</p>
+
+
+
+<p class="Subsubsection">
+ Filter with prtID=998 and SortBy catPrice
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_15.png" alt="index_15.png" width="930" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1082</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>7.95</span></td>
+  <td style='text-align: left;'><span>200</span></td>
+  <td style='text-align: left;'><span>03/03/2014 00:00:00</span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>11.7</span></td>
+  <td style='text-align: left;'><span>400</span></td>
+  <td style='text-align: left;'><span>10/09/2014 00:00:00</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1083</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>12.5</span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1084</span></td>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span>48.6</span></td>
+  <td style='text-align: left;'><span>200</span></td>
+  <td style='text-align: left;'><span>20/12/2014 00:00:00</span></td>
+  <td style='text-align: left;'><span>TRUE</span></td>
+ </tr>
+</table>
+
+<p class="Subsection">
+ Filter Part Tuples
+</p>
+
+
+
+<p class="Subsubsection">
+ With prtID=998
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_16.png" alt="index_16.png" width="687" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_17.png" alt="index_17.png" width="284" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Filter Supplier Tuples
+</p>
+
+
+
+<p class="Subsubsection">
+ Catalog Tuple with the Minimum Price for prtID=998
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_18.png" alt="index_18.png" width="875" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_19.png" alt="index_19.png" width="321" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_20.png" alt="index_20.png" width="321" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_21.png" alt="index_21.png" width="385" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ With supID
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_22.png" alt="index_22.png" width="686" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_23.png" alt="index_23.png" width="633" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Solution 2
+</p>
+
+
+
+<p class="Subsection">
+ Filter Catalog Collections
+</p>
+
+
+
+<p class="Subsubsection">
+ Filter with prtID=998
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_24.png" alt="index_24.png" width="824" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#54:0</span></td>
+  <td style='text-align: left;'><span>#54:1</span></td>
+  <td style='text-align: left;'><span>#54:2</span></td>
+  <td style='text-align: left;'><span>#54:3</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#60:7</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#65:10</span></td>
+  <td style='text-align: left;'><span>#65:14</span></td>
+  <td style='text-align: left;'><span>#65:5</span></td>
+  <td style='text-align: left;'><span>#65:9</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#66:1</span></td>
+  <td style='text-align: left;'><span>#66:2</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#67:0</span></td>
+  <td style='text-align: left;'><span>#67:1</span></td>
+  <td style='text-align: left;'><span>#67:2</span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>#68:0</span></td>
+  <td style='text-align: left;'><span>#68:1</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+</table>
+
+<p class="Input">
+ <img src="HTMLFiles/index_25.png" alt="index_25.png" width="727" height="16" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>1081</span></td>
+  <td style='text-align: left;'><span>1082</span></td>
+  <td style='text-align: left;'><span>1083</span></td>
+  <td style='text-align: left;'><span>1084</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>998</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>12.5</span></td>
+  <td style='text-align: left;'><span>48.6</span></td>
+  <td style='text-align: left;'><span>11.7</span></td>
+  <td style='text-align: left;'><span>7.95</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>400</span></td>
+  <td style='text-align: left;'><span>200</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>20/12/2014 00:00:00</span></td>
+  <td style='text-align: left;'><span>03/03/2014 00:00:00</span></td>
+  <td style='text-align: left;'><span>10/09/2014 00:00:00</span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>TRUE</span></td>
+  <td style='text-align: left;'><span>FALSE</span></td>
+  <td style='text-align: left;'><span></span></td>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+</table>
+
+<p class="Subsection">
+ Filter Catalog Tuples
+</p>
+
+
+
+<p class="Subsubsection">
+ Find Minimum Catalog Price for prtID=998
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_26.png" alt="index_26.png" width="563" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_27.png" alt="index_27.png" width="8" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_28.png" alt="index_28.png" width="423" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_29.png" alt="index_29.png" width="40" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_30.png" alt="index_30.png" width="310" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_31.png" alt="index_31.png" width="32" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ Catalog Tuple with the Minimum Price for prtID=998
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_32.png" alt="index_32.png" width="713" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_33.png" alt="index_33.png" width="321" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_34.png" alt="index_34.png" width="321" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_35.png" alt="index_35.png" width="385" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Filter Supplier Tuples
+</p>
+
+
+
+<p class="Subsubsection">
+ With supID
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_36.png" alt="index_36.png" width="710" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_37.png" alt="index_37.png" width="633" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Filter Part Tuples
+</p>
+
+
+
+<p class="Subsubsection">
+ With prtID=998
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_38.png" alt="index_38.png" width="687" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_39.png" alt="index_39.png" width="284" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Section">
+ Projection
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/index_40.png" alt="index_40.png" width="136" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_41.png" alt="index_41.png" width="130" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/index_42.png" alt="index_42.png" width="699" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/index_43.png" alt="index_43.png" width="555" height="16" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>

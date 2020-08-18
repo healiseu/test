@@ -2,5 +2,5 @@
 
 You can access this **test** project by pointing your browser at
 
-http://test.healis.eu
+https://test.healis.eu
 
